@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .main{
+            width: 86vw;
+            margin: 0 auto;
+        }
+        .pic_introduce{
+            display: flex;
+            justify-content: space-between; align-items: stretch;
+        }
+        .pic_introduce .picArea{
+            width: 40vw; height: 30vw;
+            border: 1px solid black;
+        }
+        .picArea .mianPicandArrow{
+            height: 80%;
+            background-color: beige;
+            display: flex;
+            justify-content: center;align-items: center;
+        }
+        .picArea .mianPicandArrow .mianPic{
+            width: 80%;height: 90%;
+            background-image: url(./img/龙狩猎图.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .picArea .mianPicandArrow button{
+            height: 3vw;width: 3vw;border-radius: 200%;
+        }
+        .picArea .mianPicandArrow button>img{
+            width: 100%;height: 100%;
+        }
+        .picArea .thumbnailsSlider{
+            display: flex;
+            justify-content: flex-start;align-items: center;
+            height: 100px;
+        }
+        .thumbnailsSlider .thumbnails{
+            height: 50px;width: 50px;
+            background-color: aqua;
+        }
+        .pic_introduce .introduce{
+            flex: 1;
+            margin-left: 2em;
+        }
+        .Similar{
+            display: flex;
+        }
+        .Similar .similarPics{
+            width: 20vw; height: 20vw;
+            background-image: url(./img/龙狩猎图.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .Share{
+            display: flex;
+        }
+        .Share .shareIcons{
+            width: 50px;height: 50px;
+            border-radius: 50px;
+            border: 1px solid black;
+            background-image: url(./img/scrollTip.svg);
+            background-size: cover;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>占位符</header>
+    <p class="history"><a href="#">首页</a>》》<a href="#">资源库</a>》》<a href="">检索结果</a> 》》</p>
+
+    <div class="main">
+        <div class="pic_introduce">
+            <div class="picArea">
+                <div class="mianPicandArrow">
+                    <button><img src="./img/search.svg" alt="leftarrow"></button>
+                    <div class="mianPic"></div>
+                    <button><img src="./img/search.svg" alt="rightarrow"></button>
+                </div>
+                <hr size="10px" color="black" />
+                <div class="thumbnailsSlider">
+                    <div class="thumbnails"></div>
+                </div>
+            </div>
+            <div class="introduce">
+                <h3>THE NEMA</h3>
+                <p class="period">年代：商朝(约公元前2500年)</p>
+                <p class="location">藏地：故宫博物馆</p>
+                <p class="serial number">文物号:故00100278-4/12</p>
+                <p class="family">分类：玉器</p>
+                <p class="simpleIntroduce">这是一件玉璧，玉璧是古代祭祀用的玉器，形状为圆形，中间有孔，用绳穿过孔��系在祭祀用的柱子上。这件玉璧是商代的玉璧，上面有神兽纹</p>
+                <div class="tags">
+                    <p>关键词关联类型： <span><a href="#">#tags1</a></span></p>
+                    <p>关键词关联类型： <span><a href="#">#tags1</a></span></p>
+                </div>
+            </div>
+        </div>
+        <h2><img src="#" alt="icons">相关推荐</h2>
+        <div class="Similar">
+            <div class="similarPics"></div>
+        </div>
+
+        <h2><img src="#" alt="icons">分享</h2>
+        <div class="Share">
+            <div class="shareIcons"></div>
+        </div>
+    </div>
+
+</body>
+</html>

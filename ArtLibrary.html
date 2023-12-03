@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtLibrary</title>
+</head>
+<style>
+    @font-face{
+        font-family: "WenYue_XHGuYaSong_JRFC";
+        src: url(./fonts/WenYue_XHGuYaSong_JRFC.otf);
+    }
+    @font-face{
+        font-family: "WenYue_GuDianMingChaoTi_JRFC";
+        src: url(./fonts/WenYue_GuDianMingChaoTi_JRFC.otf);
+    }
+    @font-face{
+        font-family: "STLITI";
+        src: url(./fonts/STLITI.TTF);
+    }
+
+    *{margin: 0;padding: 0;}
+    .TopArea{
+         height: 40vw;
+         background-image: url(./img/铜虎.jpg);
+         background-size: cover;
+         background-position: center;
+         display: flex;
+         justify-content: center;align-items: center;flex-direction: column;
+         color: white;
+         margin: 1em 0;
+     }
+     .TopArea p{margin: 1em 0;}
+     .SearchBar{
+        border: 1px solid black;
+        background-color: #ffffff;
+        color: #707070;
+        width: 90vw;
+        height: 1.5em;
+        padding: 0.75em 0;
+        border-radius: 10em;
+        display: flex;
+        justify-content: space-between;align-items: center;
+     }
+     .SearchBar span{
+        margin: 0 1em;
+     }
+     .SearchBar .svg_changecolor{
+        color: rgb(0, 0, 0);
+        margin: 0 1em;
+     }
+     .SearchBar svg{
+       height: 1.5em;
+     }
+     #TypeList{
+        width: 86vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+     }
+     #TypeList .types{
+        width: 18vw;
+        height: 23vw;
+        /* border: 1px solid black; */
+        margin: 0.75em;
+        background-image: url(./img/装饰性/下载.png);
+        background-size: 400%;
+        background-position: center;
+     }
+     .types .contents{
+        width: 80%; height: 100%;
+        /* border: 1px solid black; */
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;align-items: stretch;
+        overflow: hidden;
+     }
+     #TypeList .types h3{
+        font-size: 3vw;
+        font-family:"STLITI",serif;
+        color: black;
+        margin-top: 0.75em;margin-bottom: 0.25em;
+     }
+     #TypeList .types img{
+        display: block;
+        /* border: 1px solid black; */
+        flex:1;
+     }
+
+</style>
+<body>
+    <header>
+        <div class="NavigationBar"></div>
+        <div class="TopArea">
+            <h1>艺术库</h1>
+            <!-- <p>some introduce Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, mollitia?</p> -->
+            <div class="SearchBar">
+                <span>请输入您感兴趣的内容</span>
+                <!-- <img src="./img/search.svg" alt="search-icon"> -->
+                <div class="svg_changecolor">
+                    <svg t="1698807630114" class="search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4024" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M945.066667 898.133333l-189.866667-189.866666c55.466667-64 87.466667-149.333333 87.466667-241.066667 0-204.8-168.533333-373.333333-373.333334-373.333333S96 264.533333 96 469.333333 264.533333 842.666667 469.333333 842.666667c91.733333 0 174.933333-34.133333 241.066667-87.466667l189.866667 189.866667c6.4 6.4 14.933333 8.533333 23.466666 8.533333s17.066667-2.133333 23.466667-8.533333c8.533333-12.8 8.533333-34.133333-2.133333-46.933334zM469.333333 778.666667C298.666667 778.666667 160 640 160 469.333333S298.666667 160 469.333333 160 778.666667 298.666667 778.666667 469.333333 640 778.666667 469.333333 778.666667z" fill="currentColor" p-id="4025"></path></svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="TypesArea">
+        <ul id="TypeList">
+            <li class="types">
+                <div class="contents">
+                    <h3>陶瓷</h3>
+                    <img src="./img/虎文化/铜器/虎戟钟trans.png" alt="pics">
+                </div>
+            </li>
+            <li class="types">
+                <div class="contents">
+                    <h3>陶瓷</h3>
+                    <img src="./img/虎文化/铜器/虎戟钟trans.png" alt="pics">
+                </div>
+            </li> <li class="types">
+                <div class="contents">
+                    <h3>陶瓷</h3>
+                    <img src="./img/虎文化/铜器/虎戟钟trans.png" alt="pics">
+                </div>
+            </li> <li class="types">
+                <div class="contents">
+                    <h3>陶瓷</h3>
+                    <img src="./img/虎文化/铜器/虎戟钟trans.png" alt="pics">
+                </div>
+            </li> <li class="types">
+                <div class="contents">
+                    <h3>陶瓷</h3>
+                    <img src="./img/虎文化/铜器/虎戟钟trans.png" alt="pics">
+                </div>
+            </li> <li class="types">
+                <div class="contents">
+                    <h3>陶瓷</h3>
+                    <img src="./img/虎文化/铜器/虎戟钟trans.png" alt="pics">
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

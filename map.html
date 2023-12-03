@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script src="./js/echarts.js"></script>
+    <style>
+        .map{
+            width: 90vw;
+            height: 90vh;
+            border: 1px solid black;
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="map" id="testMap">
+        <script type="text/javascript">
+            // 基于准备好的dom（容器），初始化echarts实例
+            var testmap = echarts.init(document.getElementById('testMap'));
+            echarts.registerMap('china', chinaJson, {});
+            // 指定图表的配置项和数据
+            var Mapoption = {
+                title:{text:'全国地图'},
+                tooltip:{text:'45661'},  //提示框组件
+                visualMap: {    //视觉映射组件?
+                    min: 100,     
+                    max: 1000,
+                    left: 'left',  //浮动，同css的left属性
+                    inRange:{color:['#e0ffff','#006edd']},//设定颜色
+                    text: ['H','L'],           // 文本，默认为数值文本
+                    calculable: true    //是否显示拖拽用的手柄（手柄能拖拽调整选中范围）
+                },   
+                toolbox:{           //工具栏，每个图表最多仅有一个工具栏
+                    show:true,      //是否显示工具栏组件
+                    name:['中国地图'],
+                    type:'map',  //工具类型 
+                    roam:true,   //是否开启鼠标缩放和平移漫游
+                    feature:{     //各工具配置项
+                        dataView:{readOnly:false},  //数据视图工具，可以展现当前图表所用的数据，编辑后可以动态更新。
+                        restore:{},  //配置项还原。
+                        saveAsImage:{}  //保存为图片。
+                    }
+                } , 
+                series: [     //系列列表。每个系列通过 type 决定自己的图表类型
+                    {
+                        name: 'China',type: 'map',roam: true,map: 'china',  //地图类型
+                        emphasis:{label:{show:true}},  //高亮状态下的多边形和标签样式
+                        data:[
+                            {name: '北京',value: 250 },
+                            {name: '天津',value: 200 },
+                            {name: '上海',value: 300 },
+                            {name: '重庆',value: 100 },
+                            {name: '河北',value: 100 },
+                            {name: '河南',value: 100 },
+                            {name: '云南',value: 100 },
+                            {name: '辽宁',value: 100 },
+                            {name: '黑龙江',value: 100 },
+                            {name: '湖南',value: 300 },
+                            {name: '安徽',value: 100 },
+                            {name: '山东',value: 100 },
+                            {name: '新疆',value: 100 },
+                            {name: '江苏',value: 200 },
+                        ]
+                    }
+                ]
+            }
+            // 使用测试配置项和数据显示图表。    
+            var testoption = {
+                title:{text:'全国地图'},
+                tooltip:{text:'45661'},  
+                legend: {data:['销量'] },
+            xAxis: {data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]},
+            yAxis: {}, 
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            testmap.setOption(Mapoption);
+        </script>
+    </div>
+</body>
+</html>

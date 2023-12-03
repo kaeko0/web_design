@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tools</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .FixNavigationBar{
+            width: 100%;height: 2em;
+            display: flex;
+            align-items: center;justify-content: space-evenly;
+            border: 1px solid black;
+        }
+        .toolArea{
+            width: 86vw;height: 25vw;
+            margin: auto;
+            border: 2px solid black;
+            background-image: url(./img/知识图谱.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: -5% -150%;
+        }
+        .toolArea .konwmore{
+            width: 50px;height: 50px;
+            /* transform: rotateX('90deg'); */
+        }
+        .knowmore img{
+            width: 100%;height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="FixNavigationBar">
+            <h4>高级检索</h4>
+            <h4>交互地图</h4>
+            <h4>知识图谱</h4>
+            <h4>友情链接</h4>
+        </div>
+    </header>
+    <div class="Advanced Search">
+        <h2>高级检索</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, corporis.</p>
+        <div class="toolArea">
+            <button class="konwmore"><img src="./img/icon/Icon awesome-location-arrow.svg" alt="konwmore"></button>
+        </div>
+    </div>
+
+    <div class="Interactive Map">
+        <h2>交互地图</h2>
+    </div>
+
+    <div class="Konwledge Graph">
+        <h2>知识图谱</h2>
+
+    </div>
+    <div class="Friend Links">
+        <h2>友情链接</h2>
+    </div>
+</body>
+</html>

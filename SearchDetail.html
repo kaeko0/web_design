@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{
+            text-decoration: none;
+        }
+        input[type="checkbox"]{
+            -moz-appearance:none;/*兼容火狐*/
+            -webkit-appearance: none;/*兼容谷歌*/
+            appearance: none; /*清除默认样式*/
+            vertical-align: middle;
+            width: 80px;height: 20px;
+            border: 1px solid rgb(255, 128, 0);
+            border-radius: 25px;
+            background-color: aliceblue;
+        }
+        input[type="checkbox"]:checked{
+            background-color: rgb(255, 128, 0);
+        }
+        p .history{
+            margin: 20px;
+        }
+        .sideFilter{
+            width: 20vw;
+            min-height: 200px;
+            background-color:black;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="addressfrom">
+            <a href="#">formL1</a>
+            <a href="#">formL2</a>
+        </div>
+    </header>
+    <p class="history"><a href="#">首页</a>》》<a href="#">资源库</a>》》<a href="">检索结果</a> 》》</p>
+    <div class="sideFilter"></div>
+</body>
+</html>

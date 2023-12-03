@@ -1,0 +1,493 @@
+*{margin: 0;padding: 0;}
+a {text-decoration: none;width: min-content;height: min-content;}
+a:link {color:#000000;}      /* 未访问链接*/
+a:visited {color:rgb(255, 128, 0);}  /* 已访问链接 */
+body{
+    background-color: #000000;
+    color: white;
+}
+/* .NavigationBar{ backdrop-filter: blur(15px);} */
+.NavigationBar ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: chocolate;
+    margin: 0 10px 0 5px;
+}
+.NavigationBar il{
+    display: block;
+    padding: 5px;
+    margin: 0 calc(10%/7);
+    color: black;
+}
+.NavigationBar il:not(.logolink , .SearchIcon):hover > a{
+    background-color: coral;
+    color: rgb(255, 255, 255);
+}
+.NavigationBar{
+    width: 95%;
+    height: 5vh;
+    /* background-color: rgb(255, 255, 255, 0.5); */
+    backdrop-filter: blur(15px);
+    position: absolute;
+    left: 2.5%;
+    top: 1vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.barlinklist .logolink{
+    flex: 1;
+}
+.barlinklist .logolink a{
+    width: max-content;
+    display: flex;justify-content: center; align-items: center;
+}
+.barlinklist .SearchIcon{
+    width: 2.5vw;height: 2.5vw;
+    background-color: antiquewhite;
+    border-radius: 100%;
+}
+.barlinklist .SearchIcon img{
+    height: 2vw;
+}
+.logolink #logoimg{
+    width: 3vw;
+    margin-right: 10px;
+}
+.newsArea{
+    /* display: flex;
+    justify-content: flex-start;
+    flex-direction: column; */
+    max-width: 45%;
+    position: absolute;
+    margin-left: 20px;
+    top: 30vw;
+}
+.Anews{
+    /* box-sizing: border-box; */
+    backdrop-filter: blur(15px);
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px 30px;
+    /* 默认border向外挤压宽度 */
+    border: 3px solid chocolate;
+    border-radius: 50px;
+}
+.newscontent{
+    display: block;
+    color: white;
+}
+.newscontent a{
+    width: max-content;
+}
+.newscontent img{
+    float: left;
+    height: 1.5em;
+    margin-right: 5px;
+    transform: rotate(270deg);
+}
+.newscontent h3{
+    font-size: 1em;
+}
+.newscontent p{
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    font-size: 1ch;
+    /* max-height: 5ch; */
+}
+#homepage-downArrow{
+    position: absolute;
+    top: calc(var(--BGimgHeight) - var(--downarrowHeight));
+    width: 100%;
+    height: var(--downarrowHeight);
+    background: linear-gradient(rgba(0, 0, 0, 0),rgb(0, 0, 0));
+}
+#homepage-downArrow img{
+    width: 10vw;
+    position: absolute;
+    top: 70%;left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#homepage-downArrow img:hover{
+    opacity: 0.8;
+    transform: translate(-50%,-30%);
+}
+:root{
+    --tipwidth:3vw;
+    --downarrowHeight:18vw;
+    --BGimgHeight:56vw;
+}
+.scrollTip{
+    width: var(--tipwidth);
+    height: calc(var(--tipwidth)*6);
+    background-image: url(./img/scrollTip.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    right: 10px;
+    top: calc(var(--BGimgHeight) - var(--downarrowHeight) - 10vw);
+    transition: 0.5s;
+}
+.scrollTip:hover{
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+.BGIMG{
+    width: 100%;height: 56vw;
+    background-image: url(./img/tiger.jpg);
+    background-size:cover;
+    background-position: 0% 100%;
+}
+#BGimg{
+    width: 100%;
+}
+.AboutUs{
+    margin: 80px 7vw;
+    /* text-align: center; */
+}
+.AboutUs h2{margin-bottom: 20px;}
+.introduce{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap: wrap;
+}
+.introduceitem{
+    flex: 1;
+    display: flex;
+    min-width: 250px;
+    max-width: 350px;
+    min-height: 120px;
+    max-height: 200px;
+    margin-top: 40px;
+    /* border: 1px solid white; */
+}
+.introduceitem img{
+    /* flex: 1; */
+    width: 50px;
+    height: 50px;
+   /* margin会导致奇怪的结果，为什么？ 行数不对，错开。wtm*/
+   margin: 20px ;
+   /* transform: translate(20px,20px); */
+}
+.introduceitem h3{
+    text-align: left;
+    font-size: 20px;
+    margin: 5px 0 10px 20px;
+}
+.introduceitem p{
+    text-align: left;
+    font-size: 12px;
+    margin: 5px 20px 0 20px;
+}
+#one{
+   width: 51%;
+   transform: rotate(15deg);
+   float: left;
+}
+#two{
+    width: 51%;
+    transform: rotate(-15deg);
+    float: right;
+}
+.SourceLibraryContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: translateY(50%); */
+    margin:7vw;
+}
+.SourceLibraryitem{
+    flex: 1;
+    height: 30.75vw;
+    border: 1px solid gray;
+    background-position: center;
+    background-size: cover;
+    transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* background-image: url(./img/摩羯纹.jpg); */
+    /* margin: 0 20px; */
+}
+.SourceLibraryitem *{transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
+/* 逐个设置背景图 */
+.SourceLibraryitem:nth-child(1){background-image: url(./img/龙狩猎图.jpg);}
+.SourceLibraryitem:nth-child(2){background-image: url(./img/玉鸟.jpg);}
+.SourceLibraryitem:nth-child(3){background-image: url(./img/铜虎.jpg);}
+.SourceLibraryitem:nth-child(4){background-image: url(./img/摩羯纹.jpg);}
+
+.SourceLibraryitem::before{
+    content: "";
+    /* 向上追溯至最近一个确定大小的元素,这里继承到body了? */
+    width: 100%;height: 100%;
+    background-color: rgba(198, 29, 29, 0.5);
+    /* position: absolute; */
+    /* 改变position长宽属性后变了,0*0 --> 100vw*100vh */
+}
+.mask{
+    /* 为什么这个就能继承到啊XXXX,错了,继承不到.不对,改变position属性后变了? */
+    /* 脱离正常文档流后继承不到了 */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.5);
+    
+}
+/* 除了h2，其他元素隐藏并下移*/ 
+.SourceLibraryitem .mask>*:not(h2){display: none;opacity: 0.5;transform: translateY(0);margin-top: 1.75em;margin-left: 2.5vw;margin-right: 1em;filter: blur(10px);}
+.SourceLibraryitem .konwmoreBox{
+    margin: 0;
+    position: relative;
+    top: -2.5vw;
+    left: 23.5vw;
+}
+
+.SourceLibraryitem .mask h2{
+    font-size: 3vw;
+    font-family:sans-serif;
+    writing-mode:vertical-rl;
+    margin: auto;
+    transform: translateY(220%);
+}
+.SourceLibraryitem:hover{
+    flex: 4;
+}
+.SourceLibraryitem:hover .mask{
+    height: fit-content;
+}
+.SourceLibraryitem:hover h2{
+    writing-mode: horizontal-tb;
+    /* transform只能同时生效一个 */
+    transform: translateY(0.5em);
+    /* 增加上的margin会导致mask偏移,????? */
+    margin: 0 0 0 2.5vw;
+}
+.SourceLibraryitem:hover .mask>*:not(h2){
+    display: inline-block;
+    opacity: 1;
+    transform: translateY(0.5em);
+    filter: blur(0);
+}
+.TopicsArea{
+    display: flex;align-items: center;justify-content: center;flex-direction: column;
+    margin: 15vw 7vw;
+}
+.TopicsArea h2{
+    /* font-size: 25px; */
+    margin-bottom: 80px;
+    /* margin: 0 7vw 80px 7vw; */
+}
+.TopicContainer{
+    width: 86vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Topicsitem{
+    width: 25vw;
+    height: 31.25vw;
+    position: relative;z-index: 3;
+    border: 1px solid white;
+    /* background-image: url(./img/龙狩猎图.jpg); */
+    background-size: cover;
+    /* background-position: center; */
+}
+.Topicsitem:nth-child(1), .Topicsitem:nth-last-child(1){
+    width: calc(25vw * 0.75);height: calc(31.25vw * 0.75);
+}
+.Topicsitem:nth-child(2), .Topicsitem:nth-last-child(2){
+    width: calc(25vw * 0.85);height: calc(31.25vw * 0.85);
+}
+.Topicsitem:nth-child(1){position: relative;left: 5vw;z-index: 1;background-image: url(./img/玉猪龙.png);background-position: 20% 0;}
+.Topicsitem:nth-child(2){position: relative;left: 2.5vw;z-index: 2;background-image: url(./img/摩羯纹.jpg);background-position: 20% 0;}
+.Topicsitem:nth-child(3){position: relative;left: 0;z-index: 3;background-image: url(./img/龙狩猎图.jpg);}
+.Topicsitem:nth-child(4){position: relative;left: -2.5vw;z-index: 2;background-image: url(./img/蓝吻兽.jpg);background-position: 40% 0;}
+.Topicsitem:nth-child(5){position: relative;left: -5vw;z-index: 1;background-image: url(./img/铜虎.jpg);background-position: 80% 0;}
+
+.Topicsitem:nth-child(4) .sider{float: right;}
+.Topicsitem:nth-child(5) .sider{float: right;}
+
+.Topicsitem .sider{
+    float: left;/*注意*/
+    height: 100%;
+    width: 20%;
+    /* background-color: rgb(160, 54, 54); */
+    background-image: url(./img/纹理背景/流水红纯色背景.jpg);
+    background-size: cover;
+}
+.Topicsitem .sider h3{
+    font-size: 2vw;
+    writing-mode: vertical-lr;
+    /* 向上的margin会把块拖下来？？？ */
+    margin: auto;
+    transform: translateY(1em);
+}
+.TopicsArea .PNbtn{
+    /* auto又变SB */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vw auto;
+}
+.PNbtn button{height: 3vw;width: 3vw;border-radius: 200%;}
+.PNbtn img{width: 100%;height: 100%;transform: rotate(90deg);}
+.PNbtn>div{display: flex;align-items: center;justify-content: center;
+    height: 5vw;width: 5vw;
+    margin: 0 2vw;
+    border-radius: 200%;
+    color: black;
+    background-color: white;
+}
+
+/*  字体大小响应待修改  */
+.ExtraNews{
+    width: 100%;height: 20vw;
+    background-image: url(./img/虎文化/53db7999ly1hi3hmqj0n7j20u018zhd6.jpg); 
+}
+.ExtraNews .content{
+    word-break: break-all;
+    width: 45%;
+    margin: 3vw;
+    float: right;
+}
+.ExtraNews .content h2{font-size: 3vw;margin-bottom: 1em;}
+.ExtraNews .content p{font-size: 75%;}
+
+.ToolsArea{
+    width: 86vw;
+    margin: 10vw 7vw;
+}
+.ToolsArea .tools{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 13.74vw 30.36vw;
+}
+.tools .tool{
+    background-color: rgb(249, 190, 125);
+    font-size: 12px;
+    /* border: 1px solid white; */
+    overflow: hidden;
+    color: #000000;
+}
+.tool > *{margin: 0.5em;}
+/* 按钮通用格式 */
+.knowmorebtn{
+    height: 2.5em;
+    padding: 0.5em;
+    border: none;
+    cursor: pointer;
+    display: flex;justify-content: center;align-items: center;
+    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.knowmorebtn img{height: 1.2em;margin-left: 0.75em;transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);}
+.knowmorebtn:hover{opacity: 0.8;}
+.knowmorebtn:hover > img{
+    transform: rotate(-45deg) scale(1.25);
+}
+
+#t1BTN{background-color: rgb(255, 255, 255);border:1px  #000000 solid;float: right;}
+#t2BTN{float: right;transform: translateY(-50%);}
+#t2BTN img{scale: 1.25;}
+#t4BTN{background-color: rgb(255, 128, 0);}
+
+/* 背景类 */
+.noBG{background-color: transparent;}
+.onBG{background-color: white;}
+
+.tools .tool:nth-child(1){overflow: visible;}
+.tools .tool:nth-child(2){padding: 0 10px;}
+.tools .tool:nth-child(3){overflow: visible;text-align: center;}
+.tools .iconimg{
+    width: 50%;height: 100%;
+    float: left;
+}
+.tools #iconimg-line{background-image: url(./img/oodargon-2.svg);background-size: 80%;background-position: center;background-repeat: no-repeat;}
+.tools #iconimg-color{background-image: url(./img/oodargon-COLOR.svg);background-size: 100%;background-position: center;background-repeat: no-repeat;transform: scale(1.25);}
+/* 处理背景图像用 */
+.tool:nth-child(1){background-image: url(./img/纹理背景/古风纹理背景\ \(33\).jpg);background-size: cover;}
+.tool:nth-child(2){background-image: url(./img/纹理背景/流水红纯色背景横板.png);background-size: cover;}
+.tool:nth-child(3){background-image: url(./img/Ancient_Chinese_map_old_paper_with_papyrus_texture.png);background-position: center;background-size: 150%;}
+.tool:nth-child(4){background-image: url(./img/知识图谱.svg);background-size: 80%;background-repeat: no-repeat;background-position: 80% 80%;}
+
+.ButtomLinkList{
+    margin: 7vw; width: 86vw;
+    display: flex;
+    justify-content: space-between;align-items: center;
+}
+.ButtomLinkList-item{
+    width: 12vw;
+}
+.ButtomLinkList-item h3{margin-bottom: 8px;}
+.ButtomLinkList-item il{
+    display: block;
+    margin: 20px 0;
+}
+/* ?>????????? */
+
+.RandomArea{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 5vw;border: 1px solid salmon;}
+.randombtn{
+    flex: 1;background-color: bisque;
+    text-align: center;
+    display: flex;align-items: center;justify-content: center;
+    flex-direction: column;
+}
+.randombtn img{margin: 10px;}
+.randomitemContainer{
+    --itemwidth:15vw;
+    width: calc(var(--itemwidth)*5);height: calc(var(--itemwidth)*2);
+    /* float: right; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-areas: 
+    'long1 long2 short1 long3 long4'
+    'long1 long2 short2 long3 long4';
+}
+.randomitem{
+    background-color: gray;
+    border: 1px solid white;
+    transition: 1.0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.randomitem .greyPack{
+    background-color: rgba(128, 128, 128, 0.443);
+    width: 100%;height: 100%;
+    opacity: 0;
+    transition: 1.0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.randomitem:hover{scale: 1.2;}
+.randomitem:hover .greyPack{opacity: 1;}
+.randomitem:nth-child(1){grid-area: long1;background-image: url(./img/tiger02.png);background-size: cover;background-position: center;}
+.randomitem:nth-child(2){grid-area: long2;background-image: url(./img/铜虎.jpg);}
+.randomitem:nth-child(3){grid-area: short1;background-image: url(./img/龙虎并体玉带钩.jpg);background-size: cover;background-position: center;}
+.randomitem:nth-child(4){grid-area: short2;}
+.randomitem:nth-child(5){grid-area: long3;}
+.randomitem:nth-child(6){grid-area: long4;}
+
+
+.ButtomNavigationBar{
+    display: flex;
+    width: 100%;
+    padding: 1em 0;
+}
+.ButtomNavigationBar ul{
+    display: flex;
+    justify-content: center;align-items: center;
+    width: 100%;
+    color: chocolate;
+    margin: 0 5vw;
+}
+.ButtomNavigationBar il:not(.logolink){
+   margin: 0 0 0 5vw;
+}s
+
+.GoBackArrow{
+    position: fixed;top: 80vh;right: 5vw;
+}

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="288.687" viewBox="0 0 52 288.687">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #f9be7d;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #de8b37;
+        font-size: 18px;
+        font-family: AlibabaPuHuiTi_2_45_Light, 'Alibaba PuHuiTi \32 \.0';
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="组_4" data-name="组 4" transform="translate(-1728 -659.515)">
+    <g id="矩形_478" data-name="矩形 478" class="cls-1" transform="translate(1731 781.859)">
+      <rect class="cls-3" width="49" height="73"/>
+      <rect class="cls-4" x="1.5" y="1.5" width="46" height="70"/>
+    </g>
+    <line id="直线_14" data-name="直线 14" class="cls-1" y2="111.985" transform="translate(1755.5 659.515)"/>
+    <line id="直线_15" data-name="直线 15" class="cls-1" y2="82.702" transform="translate(1755.5 865.5)"/>
+    <line id="直线_16" data-name="直线 16" class="cls-1" y2="15.349" transform="translate(1755.5 788.804)"/>
+    <text id="SCROLL" class="cls-2" transform="translate(1734 886) rotate(90)"><tspan x="0" y="0">SCROLL</tspan></text>
+  </g>
+</svg>

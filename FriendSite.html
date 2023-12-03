@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FriendSites</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .Classification{
+            width: 86.72%;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .LinkContainer{
+            width: 86.72%;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* grid-template-rows: 100px 150px; */
+            gap: 25px; 
+            background-color: grey;
+        }
+        .LinkContainerItem{
+            /* margin: 10px; */
+            max-height: 200px;
+            overflow: hidden;
+        }
+        .hide{
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0),rgb(255, 255, 255));
+        }
+        .LinkContainerItem button{
+            --width:30px;
+            width: var(--width);
+            height: var(--width);
+            border-radius: 100%;
+        }
+       button img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover; 
+       }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="Title">
+            <h1>网站资源链接</h1>
+        </div>
+        <div class="Classification">
+            <ul >
+                <il><span>one</span> </il>
+                <il><span>one</span> </il>
+                <il><span>one</span> </il>
+                <il><span>one</span> </il>
+                <il><span>one</span> </il>
+                <il><span>one</span> </il>
+            </ul>
+        </div>
+        
+        <div class="LinkContainer">
+            <div class="LinkContainerItem">
+                <div class="linkimg"></div>
+                <h4>Title</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam .</p>
+                <div class="hide">
+                    <button><img src="./img/search.svg" alt="detail"></button>
+                    <button><img src="#" alt="link"></button>
+                </div>
+            </div>
+            <div class="LinkContainerItem">
+                <div class="linkimg"></div>
+                <h4>Title</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam.</p>
+                <div class="hide">
+                    <button><img src="#" alt="detail"></button>
+                    <button><img src="#" alt="link"></button>
+                </div>
+            </div>
+            <div class="LinkContainerItem">
+                <div class="linkimg"></div>
+                <h4>Title</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dis.</p>
+                <div class="hide">
+                    <button><img src="#" alt="detail"></button>
+                    <button><img src="#" alt="link"></button>
+                </div>
+            </div>
+            <div class="LinkContainerItem">
+                <div class="linkimg"></div>
+                <h4>Title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <div class="hide">
+                    <button><img src="#" alt="detail"></button>
+                    <button><img src="#" alt="link"></button>
+                </div>
+            </div>
+            <div class="LinkContainerItem">
+                <div class="linkimg"></div>
+                <h4>Title</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Q.</p>
+                <div class="hide">
+                    <button><img src="#" alt="detail"></button>
+                    <button><img src="#" alt="link"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <tbody></tbody>
+    <footer>
+        <div id="test"></div>
+    </footer>
+</body>
+</html>
