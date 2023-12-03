@@ -81,23 +81,31 @@
             max-width: 100%;
             margin-bottom: 10px;
             overflow: hidden;
-            padding: 10px 30px;
+            padding: 0.3em 3.5em 0.3em 1em;
             /* 默认border向外挤压宽度 */
-            border: 3px solid chocolate;
+            border: 0.1em solid #f9be7d;
             border-radius: 50px;
+            cursor: pointer;
         }
         .newscontent{
             display: block;
             color: white;
+            font-size: 1.2vw;
+            color: #f9be7d;
+            
         }
+        .newscontent>*{margin: 0.2em 0;}
         .newscontent a{
+            display: block;
             width: max-content;
+            font-size: 0.8vw;
+            color: #f9be7d;
         }
         .newscontent img{
             float: left;
-            height: 1.5em;
-            margin-right: 5px;
-            transform: rotate(270deg);
+            height: 1em;
+            margin-right: 3px;
+            /* transform: rotate(270deg); */
         }
         .newscontent h3{
             font-size: 1em;
@@ -106,7 +114,7 @@
             overflow: hidden;
             white-space: nowrap; 
             text-overflow: ellipsis;
-            font-size: 1ch;
+            font-size: 0.5em;
             /* max-height: 5ch; */
         }
         #homepage-downArrow{
@@ -115,7 +123,9 @@
             width: 100%;
             height: var(--downarrowHeight);
             background: linear-gradient(rgba(0, 0, 0, 0),rgb(0, 0, 0));
+            pointer-events: none;
         }
+        #homepage-downArrow *{pointer-events: auto;}
         #homepage-downArrow img{
             width: 10vw;
             position: absolute;
@@ -519,12 +529,12 @@
                         <span>动物文化线上图书馆</span>
                     </a>
             </il>
-            <il><a href="#">资源库</a></il>
-            <il><a href="#">专题</a></il>
-            <il><a href="#">工具</a></il>
-            <il><a href="#">产品</a></il>
-            <il><a href="#">捐赠</a></il>
-            <il><a href="#">关于</a></il>
+            <il><a href="./CognitionLibrary.html">资源库</a></il>
+            <il><a href="./Topics.html">专题</a></il>
+            <il><a href="./Tools.html">工具</a></il>
+            <il><a href="./products.html">产品</a></il>
+            <il><a href="./Supportme.html">捐赠</a></il>
+            <il><a href="./AboutsUS.html">关于</a></il>
             <il class="SearchIcon"><a href="#"><img src="./img/search.svg" alt="search"></a></il>
             </ul>
         </div>    
@@ -533,16 +543,16 @@
     <div class="newsArea">
         <div class="Anews">
             <div class="newscontent">
-                <h3>Lorem ipsum dolor sit</h3> 
-                <p>Lorem ipsum do</p>
-                <a href="#"><img src="./img/icon/Icon ionic-ios-arrow-dropdown.svg" alt="goarrow"><span>了解更多</span></a>
+                <h3>图腾研究考:图腾起源与发展的故事</h3> 
+                <p></p>
+                <a href="#"><img src="./img/icon/simple arrow.svg" alt="goarrow"><span>了解更多</span></a>
             </div>
         </div>
         <div class="Anews">
             <div class="newscontent">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere molestiae qui sint quam dolore, deserunt odio harum similique? Officia dolore sapiente obcaecati explicabo nihil corporis totam sint, eum dicta non!</p>
-                <a href="#"><img src="./img/icon/Icon ionic-ios-arrow-dropdown.svg" alt="goarrow"><span>了解更多</span></a>
+                <h3>华南虎近亲繁殖的基因组后果：与东北虎的比较研究</h3>
+                <p></p>
+                <a href="#"><img src="./img/icon/simple arrow.svg" alt="goarrow"><span>了解更多</span></a>
             </div>
         </div>
     </div>
