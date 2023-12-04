@@ -12,9 +12,9 @@
      a:link {color:#707070;}      /* 未访问链接*/
      a:visited {color:rgb(255, 128, 0);}  /* 已访问链接 */
      a:hover{color: rgb(0, 0, 0);} /* 鼠标移动到链接上 */
-
-    ul{list-style: none;;} /* 清楚列表样式 */
-
+     ul{list-style: none;} /* 清楚列表样式 */
+     h2{text-align: center;color: white;margin: 1em 0;}
+     body{background-color: black;}
      .TopArea{
          height: 40vw;
          background-image: url(./img/龙狩猎图.jpg);
@@ -23,7 +23,7 @@
          display: flex;
          justify-content: center;align-items: center;flex-direction: column;
          color: white;
-         margin: 1em 0;
+         /* margin: 1em 0; */
      }
      .TopArea p{margin: 1em 0;}
      .SearchBar{
@@ -54,6 +54,7 @@
         display: flex;
         justify-content: space-between;align-items: center;
      }
+     ul.Fliters > il{position: relative;}
      ul.Fliters > il > .VisibleContent{
         display: flex;
         align-items: center;justify-content: center;
@@ -67,11 +68,21 @@
      ul.Fliters > il > .VisibleContent > img{
         height: 0.8em;
      }
-     .HiddenContent{
-         display: none;
-         border: 1px solid black;
+     ul.Fliters > il:hover>.HiddenContent{
+        display: block;
      }
-     .contentType{
+     ul.Fliters > il >.HiddenContent{
+         display: none;
+         position: absolute;
+     }
+     .Small_triangle_prompt_box{
+        margin-top: 0.25em;
+        border: 1px solid black;
+        background-color: transparent;
+        /* background-image: url(./img/border-with-triangle.svg);
+        background-size: 100%; */
+     }
+     ul.Fliters > il >.HiddenContent .contentType{
         width: 150px;height: 200px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -90,10 +101,45 @@
         /* grid-area: item; */
      }
 
+    .Functionsbtn{
+          display: block;
+        }
+
+    .Functionsbtn button{
+        border: 1px solid white;
+        padding: 0.5em 1em;
+        margin: 0;
+        display:inline-block;
+        background-color: orange;
+        cursor: pointer;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .Functionsbtn button:hover{
+        background-color: rgb(255, 128, 0);
+        color: white;
+    }
+    .Functionsbtn button:hover>img{
+        filter: invert(100%);
+        transform: rotate(30deg) scale(1.1);
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .Functionsbtn button>img{
+        height: 1.2em;
+        float: left;
+        margin-right: 0.5em;
+    }
+     /* .OldBookArea>h2{text-align: center;} */
+     .oldbooks{
+        width: 86vw;
+        margin: 0 7vw;
+     }
      .oldbooks ul{
         display: flex;
-        justify-content: flex-start;align-items: center;
+        justify-content: center;align-items: center;
         flex-wrap: wrap;
+     }
+     .oldbooks li {
+        margin: 1em;
      }
      .oldbook{
         width: 200px;height: 270px;
@@ -108,16 +154,25 @@
         background-color: rgba(128, 128, 128, 0.39);
         backdrop-filter: blur(2px);
      }
+
      .words ul{
         display: flex;
         justify-content: center;align-items: center;
         flex-wrap: wrap;flex-direction: column;
         list-style-type: none;
+        width: 86vw;
+        margin: 0 7vw;
      }
      .words li{
+        width: 100%;
         display: flex;
-        justify-content: center;align-items: center;
+        justify-content:space-between;align-items: center;
         flex-direction: row;
+        margin: 0.5em 0;
+        padding: 0.5em;
+     }
+     .words li.topheadtopic{
+        height: 50px;
      }
      .words li:nth-child(2n+1){background-color: #e7e7e7;}
      .words li:nth-child(2n){background-color: #bebebe;}
@@ -152,7 +207,7 @@
                 <span>TypeName</span><span>name</span><img src="./img/icon/triangle-arrow.svg" alt="RightTriangleArrow">
                  </div> 
                 <div class="HiddenContent">
-                     <div class="Small triangle prompt box">
+                     <div class="Small_triangle_prompt_box">
                         <div class="contentBox">
                             <div class="contentType">
                             <h4>forest</h4>
@@ -165,7 +220,7 @@
             <li></li>
             </ul>
 
-            <div class="Refreshbtn">
+            <div class="Functionsbtn">
                 <button type="button"><img src="./img/icon/Icon feather-rotate-cw.svg" alt="Refresh"><span>更新</span></button>
                 <button type="button"><img src="./img/icon/Icon awesome-location-arrow.svg" alt="Sreach"><span>检索</span></button>
             </div>
@@ -190,7 +245,7 @@
                 <ul class="Fliters">
                 <il>
                     <div class="VisibleContent">
-                    <span>TypeName</span><span>name</span><img src="#" alt="RightTriangleArrow">
+                    <span>TypeName</span><span>name</span><img src="./img/icon/triangle-arrow.svg" alt="RightTriangleArrow">
                      </div> 
                     <div class="HiddenContent">
                          <div class="Small triangle prompt box">
@@ -209,22 +264,80 @@
                 </li>
                 </ul>
     
-                <div class="Refreshbtn">
-                    <button type="button"><img src="#" alt="Refresh"><span>更新</span></button>
-                    <button type="button"><img src="#" alt="Refresh"><span>更新</span></button>
+                <div class="Functionsbtn">
+                    <button type="button"><img src="./img/icon/Icon feather-rotate-cw.svg" alt="Refresh"><span>更新</span></button>
+                    <button type="button"><img src="./img/icon/Icon awesome-location-arrow.svg" alt="Refresh"><span>更新</span></button>
                 </div>
             </div>
 
             <div class="words">
                 <ul>
-                    <li> <p>名称</p><p>出处</p><p>类型</p><p>年代</p><p>涉及生物</p> </li>
-                    <li> <p>名称</p><p>出处</p><p>年代</p><p>涉及生物</p> </li>
-                    <li> <p>名称</p><p>出处</p><p>年代</p><p>涉及生物</p> </li>
-                    <li> <p>名称</p><p>出处</p><p>年代</p><p>涉及生物</p> </li>
-                    <li> <p>名称</p><p>出处</p><p>年代</p><p>涉及生物</p> </li>
+                    <li class="topheadtopic"> <p>名称</p><p>出处</p><p>类型</p><p>年代</p><p>涉及生物</p> </li>
+                    <li> <p>名称</p><p>出处</p><p>年代</p><p>涉及生物</p><a href="./details.html">查看详情</a></li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <!-- 页尾，包括尾部导航和submit -->
+<footer>
+    <div class="ButtomLinkList">
+        <div class="ButtomLinkList-item">
+            <h3>工具</h3>
+            <hr>
+            <ul>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+            </ul>
+        </div>
+        <div class="ButtomLinkList-item">
+            <h3>工具</h3>
+            <hr>
+            <ul>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+            </ul>
+        </div>    <div class="ButtomLinkList-item">
+            <h3>工具</h3>
+            <hr>
+            <ul>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+            </ul>
+        </div>    <div class="ButtomLinkList-item">
+            <h3>工具</h3>
+            <hr>
+            <ul>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+            </ul>
+        </div>
+    </div>
+      <!-- <div class="submit">
+        <form action="">
+            <input type="text" name="email" id="email">
+            <button type="submit">订阅</button>
+        </form>
+    </div> -->
+    <hr class="ButtomNavigationBarHR">
+    <div class="ButtomNavigationBar">
+        <ul class="barlinklist">
+        <il class="logolink">
+                <a href="home.html"><img src="./img/search.svg" alt="logo" id="logoimg"><span>动物文化线上图书馆</span></a>
+        </il>
+        <il><a href="#">捐赠</a></il>
+        <il><a href="#">关于</a></il>
+        <il><a href="#">联系我们</a></il>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>

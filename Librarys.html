@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarys</title>
+</head>
+<style>
+    *{margin: 0;padding: 0;}
+    body{background-color: black;}
+     a {text-decoration: none;}
+     ul{list-style: none;} /* 清楚列表样式 */
+     h2{text-align: center;color: white;margin: 1em 0;}
+     .TopArea{
+         height: 40vw;
+         background-image: url(./img/蓝吻兽.jpg);
+         background-size: cover;
+         background-position: 0 75%;
+         display: flex;
+         justify-content: center;align-items: center;flex-direction: column;
+         color: white;
+         /* margin: 1em 0; */
+     }
+     .SearchBar{
+        border: 1px solid black;
+        background-color: #ffffff;
+        color: #707070;
+        width: 90vw;
+        height: 1.5em;
+        padding: 0.75em 0;
+        border-radius: 10em;
+        display: flex;
+        justify-content: space-between;align-items: center;
+     }
+     .SearchBar span{
+        margin: 0 1em;
+     }
+     .SearchBar .svg_changecolor{
+        color: rgb(0, 0, 0);
+        margin: 0 1em;
+     }
+     .SearchBar svg{
+       height: 1.5em;
+     }
+     .fourLibsBar{width: 100%;height: 20vw;background-color: rgb(156, 47, 47);position: relative;}
+     .fourLibsBar>.bar{
+        width: 90%;height: 1.5em;
+        border-radius: 50px;
+        margin: 0 auto;
+        background-color: white;
+        /* position: absolute;
+        left: 5%; */
+     }
+     .fourLibsBar ul{
+        display: flex;
+        justify-content: space-between;align-items: center;
+        /* padding: 0; */
+        margin: 0 auto;
+        width: 90%;
+     }
+     .fourLibsBar ul .textUPbar{
+        width: 1em;height: 2em;
+        border-radius: 100%;
+        background-color: white;
+     }
+     .LibIntroduce{
+        color: white;
+     }
+     .introducePic{
+        width: 50vw;height: 30vw;
+        position: relative;
+     }
+     .LibIntroduce:nth-child(2n+1)>.introducePic{float: left;}
+     .LibIntroduce:nth-child(2n)>.introducePic{float: right;}
+     .LibIntroduce:nth-child(1)>.introducePic{background-image: url(./img/玉象.jpg);background-size: cover;}
+     .LibIntroduce:nth-child(2)>.introducePic{background-image: url(./img/破壶.jpg);background-size: cover;}
+     .LibIntroduce:nth-child(3)>.introducePic{background-image: url(./img/鸟文化/西周壶\ \(1\).jpg);background-size: cover;}
+     .LibIntroduce:nth-child(4)>.introducePic{background-image: url(./img/鸟文化/凤鸟纹提梁\ \(3\).jpg);background-size: cover;}
+     .introducePic>a{
+        position: absolute;
+        bottom: 0.5em;right: 0.5em;
+     }
+</style>
+<body>
+    <header>
+        <div class="NavigationBar"></div>
+        <div class="TopArea">
+            <h1>资源库检索</h1>
+            <p>some introduce Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, mollitia?</p>
+            <div class="SearchBar">
+                <input type="search"><span>请输入您感兴趣的内容</span>
+                <input type="hidden" name="searchText" id="searchText_CognitonLibrary_topbar">
+                <!-- <img src="./img/search.svg" alt="search-icon"> -->
+                <div class="svg_changecolor">
+                    <svg t="1698807630114" class="search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4024" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M945.066667 898.133333l-189.866667-189.866666c55.466667-64 87.466667-149.333333 87.466667-241.066667 0-204.8-168.533333-373.333333-373.333334-373.333333S96 264.533333 96 469.333333 264.533333 842.666667 469.333333 842.666667c91.733333 0 174.933333-34.133333 241.066667-87.466667l189.866667 189.866667c6.4 6.4 14.933333 8.533333 23.466666 8.533333s17.066667-2.133333 23.466667-8.533333c8.533333-12.8 8.533333-34.133333-2.133333-46.933334zM469.333333 778.666667C298.666667 778.666667 160 640 160 469.333333S298.666667 160 469.333333 160 778.666667 298.666667 778.666667 469.333333 640 778.666667 469.333333 778.666667z" fill="currentColor" p-id="4025"></path></svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="fourLibsBar">
+        <div class="bar"></div>
+        <ul class="fourLibs">
+            <li><div class="textUPbar"></div> <h4>认知库</h4></li>
+            <li><div class="textUPbar"></div> <h4>信仰库</h4></li>
+            <li><div class="textUPbar"></div> <h4>艺术库</h4></li>
+            <li><div class="textUPbar"></div> <h4>民俗库</h4></li>
+        </ul>
+    </div>
+
+    <div class="LibIntroduceArea">
+        <div class="LibIntroduce" id="CognitionLibraryIntroduce">
+            <div class="introducePic">
+                <a href="./CognitionLibrary.html"><img src="./img/icon/simple arrow with cicle.svg" alt=""></a>
+            </div>
+            <h1>资源库</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem illo voluptatem debitis fuga expedita voluptates impedit sed voluptatibus at excepturi aut veritatis earum rerum quibusdam, voluptatum, ratione non praesentium. Amet.</p>
+        </div>
+        <div class="LibIntroduce" id="CognitionLibraryIntroduce">
+            <div class="introducePic">
+                <a href="./CognitionLibrary.html"><img src="./img/icon/simple arrow with cicle.svg" alt=""></a>
+            </div>
+            <h1>资源库</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem illo voluptatem debitis fuga expedita voluptates impedit sed voluptatibus at excepturi aut veritatis earum rerum quibusdam, voluptatum, ratione non praesentium. Amet.</p>
+        </div> <div class="LibIntroduce" id="CognitionLibraryIntroduce">
+            <div class="introducePic">
+                <a href="./CognitionLibrary.html"><img src="./img/icon/simple arrow with cicle.svg" alt=""></a>
+            </div>
+            <h1>资源库</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem illo voluptatem debitis fuga expedita voluptates impedit sed voluptatibus at excepturi aut veritatis earum rerum quibusdam, voluptatum, ratione non praesentium. Amet.</p>
+        </div> <div class="LibIntroduce" id="CognitionLibraryIntroduce">
+            <div class="introducePic">
+                <a href="./CognitionLibrary.html"><img src="./img/icon/simple arrow with cicle.svg" alt=""></a>
+            </div>
+            <h1>资源库</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem illo voluptatem debitis fuga expedita voluptates impedit sed voluptatibus at excepturi aut veritatis earum rerum quibusdam, voluptatum, ratione non praesentium. Amet.</p>
+        </div>
+    </div>
+    <!-- 页尾，包括尾部导航和submit -->
+<footer>
+    <div class="ButtomLinkList">
+        <div class="ButtomLinkList-item">
+            <h3>工具</h3>
+            <hr>
+            <ul>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+            </ul>
+        </div>
+        <div class="ButtomLinkList-item">
+            <h3>工具</h3>
+            <hr>
+            <ul>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+            </ul>
+        </div>    <div class="ButtomLinkList-item">
+            <h3>工具</h3>
+            <hr>
+            <ul>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+            </ul>
+        </div>    <div class="ButtomLinkList-item">
+            <h3>工具</h3>
+            <hr>
+            <ul>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+                <il><a href="#">捐赠</a></il>
+            </ul>
+        </div>
+    </div>
+      <!-- <div class="submit">
+        <form action="">
+            <input type="text" name="email" id="email">
+            <button type="submit">订阅</button>
+        </form>
+    </div> -->
+    <hr class="ButtomNavigationBarHR">
+    <div class="ButtomNavigationBar">
+        <ul class="barlinklist">
+        <il class="logolink">
+                <a href="home.html"><img src="./img/search.svg" alt="logo" id="logoimg"><span>动物文化线上图书馆</span></a>
+        </il>
+        <il><a href="#">捐赠</a></il>
+        <il><a href="#">关于</a></il>
+        <il><a href="#">联系我们</a></il>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
