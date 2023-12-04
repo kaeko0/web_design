@@ -1,11 +1,15 @@
+<style>
         *{margin: 0;padding: 0;}
-        ul{list-style: none;}
         a {text-decoration: none;width: min-content;height: min-content;}
         a:link {color:#000000;}      /* 未访问链接*/
         a:visited {color:rgb(255, 128, 0);}  /* 已访问链接 */
         body{
             background-color: #000000;
             color: white;
+        }
+             .NavigationBar{display: flex;}
+        @media only screen and (max-width: 600px) {
+            .NavigationBar{display: none;}
         }
         .NavigationBar ul {
             width: 100%;
@@ -14,24 +18,20 @@
             align-items: center;
             color: chocolate;
             margin: 0 10px 0 5px;
-            font-size: 16px;
         }
         .NavigationBar il{
             display: block;
             padding: 5px;
-            margin: 0.5em calc(10%/7);
+            margin: 0 calc(10%/7);
+            color: black;
         }
         .NavigationBar il:not(.logolink , .SearchIcon):hover > a{
             background-color: coral;
             color: rgb(255, 255, 255);
         }
-      
-        @media only screen and (max-width: 600px) {
-            .NavigationBar{display: none;}
-        }
         .NavigationBar{
             width: 95%;
-            /* height: 5vw; */
+            height: 5vh;
             /* background-color: rgb(255, 255, 255, 0.5); */
             backdrop-filter: blur(15px);
             position: absolute;
@@ -41,14 +41,6 @@
             justify-content: flex-start;
             align-items: center;
         }
-        .slideMark{
-            width: 3.5em;
-            height: 10%;
-            background-color: rgb(255, 255, 255);
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-        }
         .barlinklist .logolink{
             flex: 1;
         }
@@ -56,63 +48,18 @@
             width: max-content;
             display: flex;justify-content: center; align-items: center;
         }
-        .logolink #logoimg{
-            width: 1.5em;
-            margin-right: 10px;
-        }
         .barlinklist .SearchIcon{
-            width: 1.25em;height: 1.25em;
-            position: relative;
+            width: 2.5vw;height: 2.5vw;
             background-color: antiquewhite;
             border-radius: 100%;
-            background-image: url(../img/search.svg);
-            background-size: 70%;
-            background-repeat: no-repeat;
-            background-position: center;
         }
-        .barlinklist .SearchIcon:hover{
-            background-color: coral;}
-        .barlinklist .SearchIcon:hover>.hideSearchBar{
-            display: block;
-            /* opacity: 0.2;奇怪 */
+        .barlinklist .SearchIcon img{
+            height: 2vw;
         }
-        .hideSearchBar{
-            display: none;
-            position: absolute;
-            top: 120%;right: 0;
+        .logolink #logoimg{
+            width: 3vw;
+            margin-right: 10px;
         }
-        .hideSearchBar input{
-            width: 10em;
-            height: 2em;
-            border-radius: 1em;
-            border: 1px solid rgb(50, 50, 50);
-            padding: 0 1em;
-        }
-        .Hidendropdown{
-            display: none;
-            /* display: flex; */
-            width: max-content;
-            height: max-content;
-            /* border: 1px solid white; */
-            position: absolute;
-            /* top距离同导航条高度， left随子元素不同而不同*/
-            top: 5vw;left: 25vw;
-            overflow: hidden;
-            backdrop-filter: blur(15px);
-        }
-        @keyframes showdropdown {
-            0% {width: 0;padding: 0;background-color: aliceblue;display: flex;}
-            100% {width: max-content;padding: 0 25vw;background-color: antiquewhite;}
-        }
-        @-webkit-keyframes showdropdown {
-            0% {width: 0;background-color: aliceblue;display: flex;}
-            100% {width: 50vw;background-color: antiquewhite;}
-        }
-        .NavigationBar il:hover>.Hidendropdown{
-            display: flex;
-            /* animation: showdropdown 3s 0.5s ease-in-out; */
-        }
-
         .newsArea{
             /* display: flex;
             justify-content: flex-start;
@@ -137,10 +84,12 @@
         }
         .newscontent{
             display: block;
+            color: white;
             font-size: 1.2vw;
-            color: #f9be7d;  
+            color: #f9be7d;
+            
         }
-        .newscontent>*{margin: 0.2em 0; font-weight: normal; /* 去除加粗样式 */}
+        .newscontent>*{margin: 0.2em 0;}
         .newscontent a{
             display: block;
             width: max-content;
@@ -191,7 +140,7 @@
         .scrollTip{
             width: var(--tipwidth);
             height: calc(var(--tipwidth)*6);
-            background-image: url(../img/scrollTip.svg);
+            background-image: url(./img/scrollTip.svg);
             background-position: center;
             background-size: cover;
             position: absolute;
@@ -205,7 +154,7 @@
         }
         .BGIMG{
             width: 100%;height: 56vw;
-            background-image: url(../img/tiger.jpg);
+            background-image: url(./img/tiger.jpg);
             background-size:cover;
             background-position: 0% 100%;
         }
@@ -265,7 +214,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
             /* transform: translateY(50%); */
             margin:7vw;
         }
@@ -276,15 +224,15 @@
             background-position: center;
             background-size: cover;
             transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-            /* background-image: url(../img/摩羯纹.jpg); */
+            /* background-image: url(./img/摩羯纹.jpg); */
             /* margin: 0 20px; */
         }
         .SourceLibraryitem *{transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
         /* 逐个设置背景图 */
-        .SourceLibraryitem:nth-child(1){background-image: url(../img/龙狩猎图.jpg);}
-        .SourceLibraryitem:nth-child(2){background-image: url(../img/玉鸟.jpg);}
-        .SourceLibraryitem:nth-child(3){background-image: url(../img/铜虎.jpg);}
-        .SourceLibraryitem:nth-child(4){background-image: url(../img/摩羯纹.jpg);}
+        .SourceLibraryitem:nth-child(1){background-image: url(./img/龙狩猎图.jpg);}
+        .SourceLibraryitem:nth-child(2){background-image: url(./img/玉鸟.jpg);}
+        .SourceLibraryitem:nth-child(3){background-image: url(./img/铜虎.jpg);}
+        .SourceLibraryitem:nth-child(4){background-image: url(./img/摩羯纹.jpg);}
 
         .SourceLibraryitem::before{
             content: "";
@@ -357,7 +305,7 @@
             height: 31.25vw;
             position: relative;z-index: 3;
             border: 1px solid white;
-            /* background-image: url(../img/龙狩猎图.jpg); */
+            /* background-image: url(./img/龙狩猎图.jpg); */
             background-size: cover;
             /* background-position: center; */
         }
@@ -367,11 +315,11 @@
         .Topicsitem:nth-child(2), .Topicsitem:nth-last-child(2){
             width: calc(25vw * 0.85);height: calc(31.25vw * 0.85);
         }
-        .Topicsitem:nth-child(1){position: relative;left: 5vw;z-index: 1;background-image: url(../img/玉猪龙.png);background-position: 20% 0;}
-        .Topicsitem:nth-child(2){position: relative;left: 2.5vw;z-index: 2;background-image: url(../img/摩羯纹.jpg);background-position: 20% 0;}
-        .Topicsitem:nth-child(3){position: relative;left: 0;z-index: 3;background-image: url(../img/龙狩猎图.jpg);}
-        .Topicsitem:nth-child(4){position: relative;left: -2.5vw;z-index: 2;background-image: url(../img/蓝吻兽.jpg);background-position: 40% 0;}
-        .Topicsitem:nth-child(5){position: relative;left: -5vw;z-index: 1;background-image: url(../img/铜虎.jpg);background-position: 80% 0;}
+        .Topicsitem:nth-child(1){position: relative;left: 5vw;z-index: 1;background-image: url(./img/玉猪龙.png);background-position: 20% 0;}
+        .Topicsitem:nth-child(2){position: relative;left: 2.5vw;z-index: 2;background-image: url(./img/摩羯纹.jpg);background-position: 20% 0;}
+        .Topicsitem:nth-child(3){position: relative;left: 0;z-index: 3;background-image: url(./img/龙狩猎图.jpg);}
+        .Topicsitem:nth-child(4){position: relative;left: -2.5vw;z-index: 2;background-image: url(./img/蓝吻兽.jpg);background-position: 40% 0;}
+        .Topicsitem:nth-child(5){position: relative;left: -5vw;z-index: 1;background-image: url(./img/铜虎.jpg);background-position: 80% 0;}
 
         .Topicsitem:nth-child(4) .sider{float: right;}
         .Topicsitem:nth-child(5) .sider{float: right;}
@@ -381,7 +329,7 @@
             height: 100%;
             width: 20%;
             /* background-color: rgb(160, 54, 54); */
-            background-image: url(../img/纹理背景/流水红纯色背景.jpg);
+            background-image: url(./img/纹理背景/流水红纯色背景.jpg);
             background-size: cover;
         }
         .Topicsitem .sider h3{
@@ -411,7 +359,7 @@
         /*  字体大小响应待修改  */
         .ExtraNews{
             width: 100%;height: 20vw;
-            background-image: url(../img/虎文化/53db7999ly1hi3hmqj0n7j20u018zhd6.jpg); 
+            background-image: url(./img/虎文化/53db7999ly1hi3hmqj0n7j20u018zhd6.jpg); 
         }
         .ExtraNews .content{
             word-break: break-all;
@@ -470,13 +418,13 @@
             width: 50%;height: 100%;
             float: left;
         }
-        .tools #iconimg-line{background-image: url(../img/oodargon-2.svg);background-size: 80%;background-position: center;background-repeat: no-repeat;}
-        .tools #iconimg-color{background-image: url(../img/oodargon-COLOR.svg);background-size: 100%;background-position: center;background-repeat: no-repeat;transform: scale(1.25);}
+        .tools #iconimg-line{background-image: url(./img/oodargon-2.svg);background-size: 80%;background-position: center;background-repeat: no-repeat;}
+        .tools #iconimg-color{background-image: url(./img/oodargon-COLOR.svg);background-size: 100%;background-position: center;background-repeat: no-repeat;transform: scale(1.25);}
         /* 处理背景图像用 */
-        .tool:nth-child(1){background-image: url(../img/纹理背景/古风纹理背景\ \(33\).jpg);background-size: cover;}
-        .tool:nth-child(2){background-image: url(../img/纹理背景/流水红纯色背景横板.png);background-size: cover;}
-        .tool:nth-child(3){background-image: url(../img/Ancient_Chinese_map_old_paper_with_papyrus_texture.png);background-position: center;background-size: 150%;}
-        .tool:nth-child(4){background-image: url(../img/知识图谱.svg);background-size: 80%;background-repeat: no-repeat;background-position: 80% 80%;}
+        .tool:nth-child(1){background-image: url(./img/纹理背景/古风纹理背景\ \(33\).jpg);background-size: cover;}
+        .tool:nth-child(2){background-image: url(./img/纹理背景/流水红纯色背景横板.png);background-size: cover;}
+        .tool:nth-child(3){background-image: url(./img/Ancient_Chinese_map_old_paper_with_papyrus_texture.png);background-position: center;background-size: 150%;}
+        .tool:nth-child(4){background-image: url(./img/知识图谱.svg);background-size: 80%;background-repeat: no-repeat;background-position: 80% 80%;}
 
         .ButtomLinkList{
             margin: 7vw; width: 86vw;
@@ -530,9 +478,9 @@
 
         .randomitem:hover{scale: 1.2;}
         .randomitem:hover .greyPack{opacity: 1;}
-        .randomitem:nth-child(1){grid-area: long1;background-image: url(../img/tiger02.png);background-size: cover;background-position: center;}
-        .randomitem:nth-child(2){grid-area: long2;background-image: url(../img/铜虎.jpg);}
-        .randomitem:nth-child(3){grid-area: short1;background-image: url(../img/龙虎并体玉带钩.jpg);background-size: cover;background-position: center;}
+        .randomitem:nth-child(1){grid-area: long1;background-image: url(./img/tiger02.png);background-size: cover;background-position: center;}
+        .randomitem:nth-child(2){grid-area: long2;background-image: url(./img/铜虎.jpg);}
+        .randomitem:nth-child(3){grid-area: short1;background-image: url(./img/龙虎并体玉带钩.jpg);background-size: cover;background-position: center;}
         .randomitem:nth-child(4){grid-area: short2;}
         .randomitem:nth-child(5){grid-area: long3;}
         .randomitem:nth-child(6){grid-area: long4;}
@@ -557,3 +505,5 @@
         .GoBackArrow{
             position: fixed;top: 80vh;right: 5vw;
         }
+
+    </style>
