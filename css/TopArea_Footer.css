@@ -1,0 +1,60 @@
+/* 清除input默认的样式 */
+input{border: none;background-color: transparent;}
+/* 清除input点击后（获得焦点后）的样式 */
+input:focus {
+   outline: none;
+   box-shadow: none;
+}
+/* 清除input有内容后的样式 */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+
+.TopArea{
+    height: 40vw;
+    background-size: cover;
+    /* background-position: center; */
+    display: flex;
+    justify-content: center;align-items: center;flex-direction: column;
+    color: white;
+}
+.TopArea h1{
+    font-size: 4.5vw;
+    font-family: "STLITI";
+}
+.TopArea p{margin: 1em 0;}
+.SearchBar{
+   border: 1px solid black;
+   background-color: #ffffff;
+   color: #707070;
+   width: 90vw;
+   height: 1.5em;
+   padding: 0.75em 0;
+   border-radius: 10em;
+   display: flex;
+   justify-content: space-between;align-items: center;
+   font-size: 1.5vw;
+}
+.SearchBar input{
+   width: 95%;
+   height: 100%;
+   font-size: 1.35vw;
+   margin: 0 2em;
+}
+.SearchBar span{
+   margin: 0 1em;
+}
+.SearchBar .svg_changecolor{
+   color: rgb(0, 0, 0);
+   margin: 0 1.5em;
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+}
+.SearchBar svg{
+  height: 1.5em;
+}

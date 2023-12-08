@@ -1,0 +1,66 @@
+/* 定义阿里巴巴普惠体 */
+@font-face {
+    font-family: "AlibabaPuHu";
+    font-weight: normal;
+    font-style: normal;
+    src: local("AlibabaPuHuiTi-2-55-Regular")
+         url(../fonts/AlibabaPuHuiTi-2-55-Regular.ttf);
+}
+@font-face {
+    font-family: "AlibabaPuHu";
+    font-weight: lighter;
+    src: local("AlibabaPuHuiTi-2-45-Light")
+         url(../fonts/AlibabaPuHuiTi-2-45-Light.ttf);
+}
+@font-face {
+    font-family: "AlibabaPuHu";
+    font-weight: bold;
+    src: local("AlibabaPuHuiTi-2-85-Bold")
+         url(../fonts/AlibabaPuHuiTi-2-85-Bold.ttf);
+}
+@font-face {
+    font-family: "AlibabaPuHu";
+    font-weight: bolder;
+    src: local("AlibabaPuHuiTi-2-105-Heavy")
+         url(../fonts/AlibabaPuHuiTi-2-105-Heavy.ttf);
+}
+/* 文悦新恒古雅宋 */
+@font-face {
+    font-family: "inkChinese";
+    src: url(../fonts/WenYue_XHGuYaSong_JRFC.otf);
+}
+/* 文悦古典明朝体 */
+@font-face {
+    font-family: "MingDynastyChinese";
+    src: url(../fonts/WenYue_GuDianMingChaoTi_JRFC.otf);
+}
+/* 华文隶书 */
+@font-face {
+    font-family: "STLITI";
+    src: url(../fonts/STLITI.TTF);
+}
+/* 汉仪黑方 */
+@font-face {
+    font-family: "HYHF";
+    src: url(../fonts/HYHeiFangW.ttf);
+}
+/* 方正正黑 */
+@font-face {
+    font-family: "FZZH";
+    src: url(../fonts/方正正准黑_GBK.TTF);
+    font-weight: normal;
+}
+@font-face {
+    font-family: "FZZH";
+    src: url(../fonts/方正正中黑_GBK.ttf);
+    font-weight: bold;
+}@font-face {
+    font-family: "FZZH";
+    src: url(../fonts/方正正大黑_GBK.ttf);
+    font-weight: bolder;
+}
+
+/* 指定默认字体 */
+*{
+    font-family: "AlibabaPuHu";
+}

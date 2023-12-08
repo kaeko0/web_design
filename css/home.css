@@ -7,7 +7,7 @@
             background-color: #000000;
             color: white;
         }
-        .NavigationBar ul {
+        .NavigationBar ul.barlinklist {
             width: 100%;
             display: flex;
             justify-content: flex-end;
@@ -16,12 +16,12 @@
             margin: 0 10px 0 5px;
             font-size: 16px;
         }
-        .NavigationBar il{
+        .NavigationBar ul.barlinklist>li{
             display: block;
             padding: 5px;
             margin: 0.5em calc(10%/7);
         }
-        .NavigationBar il .triangleborder{
+        .NavigationBar ul.barlinklist>li .triangleborder{
             width: 0;height: 0;
             display: inline-block;
             border-left: 0.5em solid transparent;
@@ -31,11 +31,11 @@
             margin-left: 0.2em;
             transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
-        .NavigationBar il:not(.logolink , .SearchIcon):hover a{
+        .NavigationBar li:not(.logolink , .SearchIcon):hover a{
             /* background-color: coral; */
             color: #FF8000;
         }
-        .NavigationBar il:not(.logolink , .SearchIcon):hover .triangleborder{
+        .NavigationBar li:not(.logolink , .SearchIcon):hover .triangleborder{
             border-bottom: 0.8em solid rgba(210, 105, 30, 0.361);
             /* x方向移动margin+文字的一半 Y方向暂无规律*/
             transform: rotate(0) scale(1) translate(calc(-0.2em + -2em),120%);
@@ -55,7 +55,7 @@
             justify-content: flex-start;
             align-items: center;
         }
-        .slideMark{
+        .NavigationBar .slideMark{
             width: 3.5em;
             height: 10%;
             background-color: rgb(255, 255, 255);
@@ -63,6 +63,7 @@
             bottom: 0;
             left: 50%;
         }
+        .NavigationBar .barlinklist{position: relative;}
         .barlinklist .logolink{
             flex: 1;
         }
@@ -103,18 +104,38 @@
             padding: 0 1em;
         }
         .Hidendropdown{
-            display: none;
-            /* display: flex; */
-            width: max-content;
+            /* display: none; */
+            display: flex;
+            justify-content: flex-start;align-items: center;
+            width: 100%;
             height: max-content;
             /* border: 1px solid white; */
             position: absolute;
-            /* top距离同导航条高度， left随子元素不同而不同*/
-            top: 5vw;left: 25vw;
+            /* top距离同导航条高度(1il文字高度+il上外边距*2+il上内边距*2+ul上外边距*2+ul上内边距*2)， left随子元素不同而不同*/
+            /* 此处%百分号继承ul（即上一个确认位置的元素的高度，postion：relative也可以被确认位置） */
+            top: calc(100%);left: 0;
+            padding: 1em;
             overflow: hidden;
-            background-color: white;
-            backdrop-filter: blur(15px);
+            background-color: rgba(255, 255, 255, 0.5);
+            /* backdrop-filter: blur(15px); */
         }
+        .Hidendropdown h2{font-family: "FZZH";writing-mode: vertical-lr;margin-right: 0.3em;}
+        .Hidendropdown img{
+            margin: 0 2em 0 1em;
+        }
+        /* 第一层ul */
+        .Hidendropdown>ul{
+            display: flex;
+            justify-content: space-around;align-items: center;
+            flex-direction: row;
+        }
+        .Hidendropdown>ul>li>ul{
+            display: flex;
+            /* justify-content: space-around;align-items: center; */
+            flex-direction: column;
+        }
+
+
         @keyframes showdropdown {
             0% {width: 0;padding: 0;background-color: aliceblue;display: flex;}
             100% {width: max-content;padding: 0 25vw;background-color: antiquewhite;}
@@ -123,7 +144,7 @@
             0% {width: 0;background-color: aliceblue;display: flex;}
             100% {width: 50vw;background-color: antiquewhite;}
         }
-        .NavigationBar il:hover>.Hidendropdown{
+        .NavigationBar li:hover>.Hidendropdown{
             display: flex;
             /* animation: showdropdown 3s 0.5s ease-in-out; */
         }
@@ -502,7 +523,7 @@
             width: 12vw;
         }
         .ButtomLinkList-item h3{margin-bottom: 8px;}
-        .ButtomLinkList-item il{
+        .ButtomLinkList-item li{
             display: block;
             margin: 20px 0;
         }
@@ -565,7 +586,7 @@
             color: chocolate;
             margin: 0 5vw;
         }
-        .ButtomNavigationBar il:not(.logolink){
+        .ButtomNavigationBar li:not(.logolink){
            margin: 0 0 0 5vw;
         }
 
