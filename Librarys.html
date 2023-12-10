@@ -9,7 +9,10 @@
     <style>
         *{margin: 0;padding: 0;}
         body{background-color: black;}
-         a {text-decoration: none;}
+        a {text-decoration: none;}
+        a:link {color:white;}      /* 未访问链接*/
+        a:visited {color:rgb(255, 128, 0);}  /* 已访问链接 */
+        a:not(a.knowmorebtn):hover{filter: invert(0.3);} /* 鼠标移动到链接上 */
          ul{list-style: none;} /* 清楚列表样式 */
          h2{text-align: center;color: white;margin: 1em 0;}
          /* input{border: none;background-color: transparent;} */
@@ -61,19 +64,133 @@
          .LibIntroduce:nth-child(3)>.introducePic{background-image: url(./img/鸟文化/西周壶\ \(1\).jpg);background-size: cover;}
          .LibIntroduce:nth-child(4)>.introducePic{background-image: url(./img/鸟文化/凤鸟纹提梁\ \(3\).jpg);background-size: cover;}
     
-         .introducePic>.knowmorebtn img{position: absolute;
+         .introducePic .knowmorebtn img{position: absolute;
             bottom: 0.5em;right: 0.5em;transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);}
     /* knowmorebtn类专用 */
         .knowmorebtn:hover{opacity: 0.8;}
-        .knowmorebtn:hover > img{
-            transform: rotate(-45deg) scale(1.25);
-        }
-    
+        .knowmorebtn:hover img{transform: rotate(-45deg) scale(1.25); }
+    /* 覆盖外部样式或增添部分外部样式中未定义的部分 */
+    .ButtomLinkList-item h3{color: white;}
+    footer{margin-top: 15vw;}
     </style>
 </head>
 <body>
     <header>
-        <div class="NavigationBar"></div>
+        <div class="NavigationBar">
+            <a name="pageHead"></a>  <!-- 一个跳转标记用的超链接 -->
+            <div class="slideMark">
+                <div class="slideMark-square"></div>
+                <div class="slideMark-triangle"></div>
+            </div>
+            
+            <ul class="barlinklist">
+            <li class="logolink">
+                <a href="index.html" >
+                    <img src="./img/search.svg" alt="logo" id="logoimg">
+                    <span>动物文化线上图书馆</span>
+                </a>
+            </li>
+            <li>
+                <label><a href="./Librarys.html" id="a">资源库</a> <div class="triangleborder"></div></label>
+                <div class="Hidendropdown">
+                    <h2>资源库</h2>
+                    <img src="./img/icon/simple arrow.svg" alt="arrowToleft">
+                    <ul>
+                        <li><a href="./CognitionLibrary.html">认知库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./ArtLibrary.html">艺术库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./FakeError.html">民俗库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./UnfinishedWarning.html">信仰库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="./Topics.html">专题</a><div class="triangleborder"></div>
+                <div class="Hidendropdown">
+                    <h2>专题</h2>
+                    <img src="./img/icon/simple arrow.svg" alt="arrowToleft">
+                    <ul>
+                        <li><a href="./CognitionLibrary.html">中国虎文化专题</a></li>
+                        <li><a href="./ArtLibrary.html"></a>青铜兽类专题</li>
+                        <li><a href="./FakeError.html"></a>图腾专题</li>
+                    </ul>
+                </div></li>
+            <li><a href="./Tools.html">工具</a><div class="triangleborder"></div>
+                <div class="Hidendropdown">
+                    <h2>工具</h2>
+                    <img src="./img/icon/simple arrow.svg" alt="arrowToleft">
+                    <ul>
+                        <li><a href="./CognitionLibrary.html">高级检索</a></li>
+                        <li><a href="./ArtLibrary.html"></a>历史地图</li>
+                        <li><a href="./FakeError.html"></a>知识图谱</li>
+                        <li><a href="./UnfinishedWarning.html">友情链接</a></li>
+                    </ul>
+                </div></li>
+            <li><a href="./products.html">产品</a><div class="triangleborder"></div></li>
+            <li><a href="./Supportme.html">捐赠</a></li>
+            <li><a href="./AboutsUS.html">关于</a></li>
+            <li class="SearchIcon">
+                <div class="hideSearchBar">
+                    <input type="text">
+                </div>
+            </li>
+            </ul>
+        </div>
         <div class="TopArea">
             <h1>资源库检索</h1>
             <p></p>
@@ -83,7 +200,7 @@
                 <!-- <img src="./img/search.svg" alt="search-icon"> -->
                 <button class="svg_changecolor" type="submit">
                     <svg t="1698807630114" class="search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4024" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M945.066667 898.133333l-189.866667-189.866666c55.466667-64 87.466667-149.333333 87.466667-241.066667 0-204.8-168.533333-373.333333-373.333334-373.333333S96 264.533333 96 469.333333 264.533333 842.666667 469.333333 842.666667c91.733333 0 174.933333-34.133333 241.066667-87.466667l189.866667 189.866667c6.4 6.4 14.933333 8.533333 23.466666 8.533333s17.066667-2.133333 23.466667-8.533333c8.533333-12.8 8.533333-34.133333-2.133333-46.933334zM469.333333 778.666667C298.666667 778.666667 160 640 160 469.333333S298.666667 160 469.333333 160 778.666667 298.666667 778.666667 469.333333 640 778.666667 469.333333 778.666667z" fill="currentColor" p-id="4025"></path></svg>
-                </>
+                </button>
             </div>
         </div>
     </header>
@@ -104,8 +221,8 @@
                 <a href="./CognitionLibrary.html" class="knowmorebtn"><img src="./img/icon/simple arrow with cicle.svg" alt="arrow"></a>
             </div>
             <div class="TextContent">
-                <h1>资源库</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem illo voluptatem debitis fuga expedita voluptates impedit sed voluptatibus at excepturi aut veritatis earum rerum quibusdam, voluptatum, ratione non praesentium. Amet.</p>
+                <h1>认知库</h1>
+                 <p>对各类动物（包括野生动物和家畜）的系统性认知，包括其分类、生态学、行为、形态、生活习性、药用价值等方面的知识</p>
             </div>
         </div>
         <div class="LibIntroduce" id="FaithLibraryIntroduce">
@@ -113,28 +230,84 @@
                 <a href="./FakeError.html" class="knowmorebtn"><img src="./img/icon/simple arrow with cicle.svg" alt="arrow"></a>
             </div>
             <div class="TextContent">
-                <h1>资源库</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem illo voluptatem debitis fuga expedita voluptates impedit sed voluptatibus at excepturi aut veritatis earum rerum quibusdam, voluptatum, ratione non praesentium. Amet.</p>
+                <h1>信仰库</h1>
+                <p>人们对动物的崇拜、神秘信仰、象征性和神话传说，将动物视为神灵、护身符、吉祥物或其他超自然存在，包括了人们对某些动物的崇拜和祭祀，将动物脱离生物学意义，用作象征、神话或寓言的元素等</p>
             </div>
         </div> <div class="LibIntroduce" id="ArtLibraryIntroduce">
             <div class="introducePic">
                 <a href="./ArtLibrary.html" class="knowmorebtn"><img src="./img/icon/simple arrow with cicle.svg" alt="arrow"></a>
             </div>
             <div class="TextContent">
-                <h1>资源库</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem illo voluptatem debitis fuga expedita voluptates impedit sed voluptatibus at excepturi aut veritatis earum rerum quibusdam, voluptatum, ratione non praesentium. Amet.</p>
+                <h1>艺术库</h1>
+                <p>动物在中国传统文学、绘画、雕刻、音乐、戏曲和其他艺术表现形式中的广泛应用，包括将动物作为主题、象征或艺术创作的灵感来源</p>
             </div>
         </div> <div class="LibIntroduce" id="FolkLibraryIntroduce">
             <div class="introducePic">
                 <a href="./UnfinishedWarning.html" class="knowmorebtn"><img src="./img/icon/simple arrow with cicle.svg" alt="arrow"></a>
             </div>
             <div class="TextContent">
-                <h1>资源库</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem illo voluptatem debitis fuga expedita voluptates impedit sed voluptatibus at excepturi aut veritatis earum rerum quibusdam, voluptatum, ratione non praesentium. Amet.</p>
+                <h1>民俗库</h1>
+                <p>与动物相关的各种民间传说、节庆活动、俗信和习惯，如春节的舞龙舞狮等，与动物相关的节庆活动、婚丧嫁娶、农事仪式和其他社会仪式的习俗</p>
             </div>
         </div>
     </div>
     <!-- 页尾，包括尾部导航和submit -->
-
+    <footer>
+        <div class="ButtomLinkList">
+            <div class="ButtomLinkList-item">
+                <h3>服务</h3>
+                <hr>
+                <ul>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">数据开放</a></li>
+                </ul>
+            </div>
+            <div class="ButtomLinkList-item">
+                <h3>更改</h3>
+                <hr>
+                <ul>
+                    <li><a href="#">时间线</a></li>
+                    <li><a href="#">最近更改</a></li>
+                </ul>
+            </div>    <div class="ButtomLinkList-item">
+                <h3>工具</h3>
+                <hr>
+                <ul>
+                    <li><a href="#">高级检索</a></li>
+                    <li><a href="#">纪年快速查询</a></li>
+                    <li><a href="#">生物历史地图</a></li>
+                    <li><a href="#">知识图谱</a></li>
+                </ul>
+            </div>    
+            <div class="ButtomLinkList-item">
+                <h3>友情链接</h3>
+                <hr>
+                <ul>
+                    <li><a href="#">中国生物地图</a></li>
+                    <li><a href="#">中国生物数据库</a></li>
+                    <li><a href="#">中国植物志</a></li>
+                    <li><a href="#">古地图</a></li>
+                </ul>
+            </div>
+        </div>
+          <!-- <div class="submit">
+            <form action="">
+                <input type="text" name="emali" id="emali">
+                <button type="submit">订阅</button>
+            </form>
+        </div> -->
+        <hr class="ButtomNavigationBarHR">
+        <div class="ButtomNavigationBar">
+            <ul class="barlinklist">
+            <li class="logolink">
+                    <a href="index.html"><img src="./img/search.svg" alt="logo" id="logoimg"><span>动物文化线上图书馆</span></a>
+            </li>
+            <li><a href="./FakeError.html">捐赠</a></li>
+            <li><a href="./AboutsUS.html">关于</a></li>
+            <li><a href="./AboutsUS.html">联系我们</a></li>
+            </ul>
+        </div>
+    </footer>
+    
 </body>
 </html>

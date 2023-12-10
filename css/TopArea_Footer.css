@@ -13,7 +13,7 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
 
-
+/* 对于顶部有大型搜索条的页面的顶部区域 */
 .TopArea{
     height: 40vw;
     background-size: cover;
@@ -26,7 +26,7 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 4.5vw;
     font-family: "STLITI";
 }
-.TopArea p{margin: 1em 0;}
+.TopArea p{margin: 1em 0;width: 80%;font-size: 1.75vw;}
 .SearchBar{
    border: 1px solid black;
    background-color: #ffffff;
@@ -57,4 +57,217 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .SearchBar svg{
   height: 1.5em;
+}
+
+
+/* 导航条样式 */
+.NavigationBar ul.barlinklist {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   color: #F9BE7D;
+   margin: 0 10px 0 5px;
+   font-size: 16px;
+}
+.NavigationBar ul.barlinklist>li{
+   display: block;
+   padding: 5px;
+   margin: 0.5em calc(10%/7);
+}
+.NavigationBar ul.barlinklist>li .triangleborder{
+   width: 0;height: 0;
+   display: inline-block;
+   border-left: 0.5em solid transparent;
+   border-right: 0.5em solid transparent;
+   border-bottom: 0.8em solid chocolate;
+   transform: rotate(90deg) scale(0.8);
+   margin-left: 0.2em;
+   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.NavigationBar li:not(.logolink , .SearchIcon):hover a{
+   /* background-color: coral; */
+   color: #FF8000;
+}
+.NavigationBar li:not(.logolink , .SearchIcon):hover .triangleborder{
+   border-bottom: 0.8em solid rgba(210, 105, 30, 0.361);
+   /* x方向移动margin+文字的一半 Y方向暂无规律*/
+   transform: rotate(0) scale(1) translate(calc(-0.2em + -2em),120%);
+}
+@media only screen and (max-width: 600px) {
+   .NavigationBar{display: none;}
+}
+.NavigationBar{
+   width: 95%;
+   /* height: 5vw; */
+   /* background-color: rgb(255, 255, 255, 0.5); */
+   backdrop-filter: blur(15px);
+   position: absolute;
+   z-index: 333333;
+   left: 2.5%;
+   top: 1vh;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+.NavigationBar .slideMark{
+   width: 3.5em;
+   height: 10%;
+   background-color: rgb(255, 255, 255);
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+}
+.NavigationBar .barlinklist{position: relative;}
+.barlinklist .logolink{
+   flex: 1;
+}
+.barlinklist .logolink a{
+   width: max-content;
+   display: flex;justify-content: center; align-items: center;
+}
+.logolink #logoimg{
+   width: 1.5em;
+   margin-right: 10px;
+}
+.barlinklist .SearchIcon{
+   width: 1.25em;height: 1.25em;
+   position: relative;
+   background-color: antiquewhite;
+   border-radius: 100%;
+   background-image: url(../img/search.svg);
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.barlinklist .SearchIcon:hover{
+   background-color: coral;}
+.barlinklist .SearchIcon:hover>.hideSearchBar{
+   display: block;
+   /* opacity: 0.2;奇怪 */
+}
+.hideSearchBar{
+   display: none;
+   position: absolute;
+   top: 120%;right: 0;
+}
+.hideSearchBar input{
+   width: 10em;
+   height: 2em;
+   border-radius: 1em;
+   border: 1px solid rgb(50, 50, 50);
+   padding: 0 1em;
+}
+.Hidendropdown{
+   /* display: none; */
+   display: flex;
+   justify-content: flex-start;align-items: center;
+   width: 100%;
+   height: max-content;
+   /* border: 1px solid white; */
+   position: absolute;
+   /* top距离同导航条高度(1il文字高度+il上外边距*2+il上内边距*2+ul上外边距*2+ul上内边距*2)， left随子元素不同而不同*/
+   /* 此处%百分号继承ul（即上一个确认位置的元素的高度，postion：relative也可以被确认位置）,减去10%为了能悬停*/
+   top: calc(100% - 10%);left: 0;
+   /* padding会撑大边框,如果设置height为0也会撑大 */
+   padding: 1em 0 1em 1em;
+   overflow: hidden;
+   background-color: rgba(255, 255, 255, 0.758);
+   -webkit-backdrop-filter: blur(15px);
+   backdrop-filter: blur(15px);
+   /* 此处使用clip-path属性，可响应css动画，可连同padding属性一起剪切了*/
+   clip-path: inset(0 0 100% 0);
+}
+/* .Hidendropdown::before{content: "";position: relative;top: 50%;right: 100%;width: 100%;height: 100%;background-color: #000000;} */
+.Hidendropdown *{opacity: 0;filter: blur(10px);transform: translate(0,0.5em);transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);transition-delay: 0.6s;}
+.Hidendropdown h2{font-family: "FZZH";writing-mode: vertical-lr;margin-right: 0.3em;}
+.Hidendropdown img{
+   margin: 0 2em 0 1em;
+}
+/* 第一层ul */
+.Hidendropdown>ul{
+   display: flex;
+   justify-content: space-around;align-items: center;
+   flex-direction: row;
+}
+.Hidendropdown>ul>li{
+   font-size: 18px;
+   color: #FF8000;
+   margin: 0 1em;
+}
+/* 第二层ul */
+.Hidendropdown>ul>li>ul{
+   width: max-content;
+   display: flex;
+   justify-content: space-around;align-items: center;
+   flex-direction: column;
+   font-size: 16px;
+   color:#FF8000;
+}
+.Hidendropdown>ul>li>ul>li{
+   margin: 0.5em 0;
+   width: max-content;
+   display: flex;align-items: center;justify-content: space-between;
+   color: #f9be7d;
+}
+
+@keyframes showdropdown {
+   0% {height: 0;padding: 0;display: flex;}
+   100% {height: max-content;}
+}
+@-webkit-keyframes showdropdown {
+   0% {height: 0;padding: 0;display: flex;}
+   100% {height: max-content;}
+}
+
+@keyframes showdropdowncontent {
+   0% {opacity: 0;filter: blur(10px);transform: translate(0,0.5em);}
+   100% {opacity: 1;filter: blur(0px);transform: translate(0,0);}
+} 
+@-webkit-keyframes showdropdowncontent {
+   0% {opacity: 0;filter: blur(10px);transform: translate(0,0.5em);}
+   100% {opacity: 1;filter: blur(0px);transform: translate(0,0);}
+} 
+/* 简单的transition动画只能响应具体的数值，对auto之类的无反应，如果输具体数字就能动，输max-content就不能动，只会突变 */
+/* animition动画可以响应max-content的数值？animation可以设置延迟 */
+.NavigationBar li:hover>.Hidendropdown{
+   clip-path: inset(0 0 0 0);
+   transition: all .5s;
+}
+/*animation：动画名称 |持续时间 | 动画效果 | 延迟 | 重复次数 | 方向 | 过渡方式 | 是否暂停 | 动画名          只会在首次渲染时执行*/
+/* transition-delay用于设置动画延迟时间，单位为s */
+.NavigationBar li:hover>.Hidendropdown *{
+   opacity: 1;filter: blur(0px);transform: translate(0,0);
+}
+
+/* 页尾样式 */
+.ButtomLinkList{
+   margin: 7vw; width: 86vw;
+   display: flex;
+   justify-content: space-between;align-items:flex-start;
+}
+.ButtomLinkList-item{
+   width: 12vw;
+}
+.ButtomLinkList-item h3{margin-bottom: 8px;}
+.ButtomLinkList-item li{
+   display: block;
+   margin: 20px 0;
+}
+/* ?>????????? */
+.ButtomNavigationBarHR{width: 100%;}
+.ButtomNavigationBar{
+   display: flex;
+   width: 100%;
+   padding: 1em 0;
+}
+.ButtomNavigationBar ul{
+   display: flex;
+   justify-content: center;align-items: center;
+   width: 100%;
+   color: chocolate;
+   margin: 0 5vw;
+}
+.ButtomNavigationBar li:not(.logolink){
+  margin: 0 0 0 5vw;
 }

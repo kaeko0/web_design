@@ -4,86 +4,303 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Topics</title>
+    <link rel="stylesheet" href="./css/addFonts.css">
+    <link rel="stylesheet" href="./css/TopArea_Footer.css">
     <style>
-        a {text-decoration: none;}
-        a:hover{color: azure;}
-        a:link {color:#707070;}      /* 未访问链接*/
-        a:visited {color:rgb(255, 128, 0);}  /* 已访问链接 */
         *{margin: 0;padding: 0;}
-
-        .TopArea{
-            height: 40vw;
-            background-image: url(./img/蓝吻兽.jpg);
+        a {text-decoration: none;}
+        a:link {color:#000000;}      /* 未访问链接*/
+        a:visited {color:#F9BE7D;}  /* 已访问链接 */
+        ul{list-style: none;}
+        body{
+            background-image: url(./img/纹理背景/古风纹理背景\ \(34\).jpg);
+            background-size: 60%;
+            background-repeat: repeat;}
+        main{width: 86vw;margin: 0 auto;text-align: center;}
+        main>h2{
+            font-size: 2.5vw;
+            margin: calc(-1.5em + 17.5%) 0 0.8em 0;
+        }
+        .top-text-navigation{
+            margin: 2.5vw 7vw;
+        }
+        .banner{
+            width: 100%;height: 40vw;
+            background-image: url(./img/纹理背景/banner-1.png);background-size: cover;background-position: center;
+            overflow: visible;
+        }
+        .banner>div{
+            height: 135%;
+            background-image: url(./img/纹理背景/banner-2.png);background-size: cover;background-position: center;
+            position: relative;
+            top: -17.5%;
+            pointer-events: none;
+        }
+        ul.fliter{
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;align-items: center;
+            padding: 0.5em;
+            margin: 1em 0;
+            background-color: rgba(255, 255, 255, 0.516);
+            font-size: 1.25vw;
+        }
+        ul.fliter>li{
+            margin-right: 1em;
+        }
+        ul.fliter>li>button{
+            background-color: rgb(220, 220, 220);
+            border: none;
+            padding: 0.5em 1.8em;
+            margin: 0 0.5em;
+            border-radius: 0;
+        }
+        ul.fliter>li>button:hover{filter: invert(0.2);}
+        ul.fliter>li>button:focus{
+            color: white;
+            background-color: #F9BE7D;
+        }
+        ul.topicsContainter{
+            /* display: flex;
+            justify-content: flex-start;align-items: center; */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* 高度为宽度-网格间距+段落内容高度+边距 */
+            /* grid-template-rows:repeat(2, calc((86vw - 5vw * 3) / 4 + 20px + 16px)); */
+            row-gap: 3vw;column-gap: 3vw;
+        }
+        ul.topicsContainter .topicitem{
+            height: calc((86vw - 5vw * 3) / 3);
             background-size: cover;
             background-position: center;
-            display: flex;
-            justify-content: center;align-items: center;flex-direction: column;
-            color: white;
         }
+        .topicitem:nth-child(1){background-image: url(./img/陶辟邪座.jpg);}
+        .topicitem:nth-child(2){background-image: url(./img/金熊.jpg);}
+        .topicitem:nth-child(3){background-image: url(./img/陶牛.jpg);}
+        .topicitem:nth-child(4){background-image: url(./img/鸟文化/西周壶\ \(1\).jpg)}
+        .topicitem:nth-child(5){background-image: url(./img/虎文化/生活用品/飞虎旗.png);}
+        .topicitem:nth-child(6){background-image: url(./img/陶人马.jpg);}
+        ul.topicsContainter .sideText{
+            float: left;
+            height: 100%;
+            width: 20%;
+            background-image: url(../img/纹理背景/流水红纯色背景.jpg);
+            background-size: cover;
+        }
+        ul.topicsContainter .sideText h3{
+            font-size: 2vw;
+            writing-mode: vertical-lr;
+            text-align: center;
+            margin: 0.5em auto;
+        }
+         /* 按钮通用格式 */
+         .knowmorebtn{
+            height: 2.5em;
+            padding: 0.5em;
+            border: none;
+            cursor: pointer;
+            display: flex;justify-content: center;align-items: center;
+            transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .knowmorebtn img{width: 1.2em;margin-left: 0.75em;transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);transform: rotate(-90deg)}
+        .knowmorebtn:hover{opacity: 0.8;}
+        .knowmorebtn:hover > img{
+            transform: rotate(-90deg) scale(1.25);
+        }
+        .knowmorebtn#Topicknowmorwbtn{
+            color: #FFEBA8;
+            background-color: #FBAF5E;
+            margin: 2em 0;
+            float: right;
+        }
+        /* 覆盖外部css样式 */
+        .NavigationBar{ position:relative;}
     </style>
 </head>
 <body>
     <header>
-        <div class="NavigationBar"></div>
+        <div class="NavigationBar">
+            <a name="pageHead"></a>  <!-- 一个跳转标记用的超链接 -->
+            <div class="slideMark">
+                <div class="slideMark-square"></div>
+                <div class="slideMark-triangle"></div>
+            </div>
+            
+            <ul class="barlinklist">
+            <li class="logolink">
+                <a href="index.html" >
+                    <img src="./img/search.svg" alt="logo" id="logoimg">
+                    <span>动物文化线上图书馆</span>
+                </a>
+            </li>
+            <li>
+                <label><a href="./Librarys.html" id="a">资源库</a> <div class="triangleborder"></div></label>
+                <div class="Hidendropdown">
+                    <h2>资源库</h2>
+                    <img src="./img/icon/simple arrow.svg" alt="arrowToleft">
+                    <ul>
+                        <li><a href="./CognitionLibrary.html">认知库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./ArtLibrary.html">艺术库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./FakeError.html">民俗库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./UnfinishedWarning.html">信仰库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="./Topics.html">专题</a><div class="triangleborder"></div>
+                <div class="Hidendropdown">
+                    <h2>专题</h2>
+                    <img src="./img/icon/simple arrow.svg" alt="arrowToleft">
+                    <ul>
+                        <li><a href="./CognitionLibrary.html">中国虎文化专题</a></li>
+                        <li><a href="./ArtLibrary.html"></a>青铜兽类专题</li>
+                        <li><a href="./FakeError.html"></a>图腾专题</li>
+                    </ul>
+                </div></li>
+            <li><a href="./Tools.html">工具</a><div class="triangleborder"></div>
+                <div class="Hidendropdown">
+                    <h2>工具</h2>
+                    <img src="./img/icon/simple arrow.svg" alt="arrowToleft">
+                    <ul>
+                        <li><a href="./CognitionLibrary.html">高级检索</a></li>
+                        <li><a href="./ArtLibrary.html"></a>历史地图</li>
+                        <li><a href="./FakeError.html"></a>知识图谱</li>
+                        <li><a href="./UnfinishedWarning.html">友情链接</a></li>
+                    </ul>
+                </div></li>
+            <li><a href="./products.html">产品</a><div class="triangleborder"></div></li>
+            <li><a href="./Supportme.html">捐赠</a></li>
+            <li><a href="./AboutsUS.html">关于</a></li>
+            <li class="SearchIcon">
+                <div class="hideSearchBar">
+                    <input type="text">
+                </div>
+            </li>
+            </ul>
+        </div>
+        <div class="top-text-navigation">
+            <a href="./index.html">首页</a>
+            <img src="./img/icon/simple arrow.svg" alt="arrow">
+            <a href="#">专题</a>
+        </div>
+        <div class="banner">
+            <div></div>
+        </div>
     </header>
-
-    <div class="TopArea">
-        <h1>资源库检索</h1>
-        <div class="SearchBar">
-            <span>请输入您感兴趣的内容</span>
-            <img src="#" alt="search-icon">
-        </div>
-    </div>
-
-    <div class="NavigationSrcollBar">
-        <ul>
-            <li>认知库</li>
-            <li>信仰库</li>
-            <li>艺术库</li>
-            <li>民俗库</li>
+    <main>
+        <h2>专题总览</h2>
+        <ul class="fliter">
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
         </ul>
-    </div>
+        <ul class="topicsContainter">
+            <li class="topicitem">
+                <div class="sideText">
+                    <h3>动物图腾专题</h3>
+                </div>
+            </li>
+            <li class="topicitem">
+                <div class="sideText">
+                    <h3>动物图腾专题</h3>
+                </div>
+            </li>
+            <li class="topicitem">
+                <div class="sideText">
+                    <h3>动物图腾专题</h3>
+                </div>
+            </li>
+            <li class="topicitem">
+                <div class="sideText">
+                    <h3>动物图腾专题</h3>
+                </div>
+            </li>
+            <li class="topicitem">
+                <div class="sideText">
+                    <h3>动物图腾专题</h3>
+                </div>
+            </li>
+            <li class="topicitem">
+                <div class="sideText">
+                    <h3>动物图腾专题</h3>
+                </div>
+            </li>
+        </ul>
+        <button class="knowmorebtn" id="Topicknowmorwbtn"><span>查看全部专题</span><img src="./img/icon/triangle-arrow.svg" alt="Tarrow"></button>
+    </main>
 
-    <div class="library0">
-        <div class="introduceImage">
-            <img src="#" alt="BGimage">
-            <img src="#" alt="arrow-icon">
+    <footer>
+        <hr class="ButtomNavigationBarHR">
+        <div class="ButtomNavigationBar">
+            <ul class="barlinklist">
+            <li class="logolink">
+                    <a href="index.html"><img src="./img/search.svg" alt="logo" id="logoimg"><span>动物文化线上图书馆</span></a>
+            </li>
+            <li><a href="./FakeError.html">捐赠</a></li>
+            <li><a href="./AboutsUS.html">关于</a></li>
+            <li><a href="./AboutsUS.html">联系我们</a></li>
+            </ul>
         </div>
-        <div class="introduceContent">
-            <h2>认知库</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id ratione nesciunt quia repellendus voluptatum.</p>
-        </div>
-    </div>
-    <div class="library1">
-        <div class="introduceImage">
-            <img src="#" alt="BGimage">
-            <img src="#" alt="arrow-icon">
-        </div>
-        <div class="introduceContent">
-            <h2>认知库</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id ratione nesciunt quia repellendus voluptatum.</p>
-        </div>
-    </div>
-    <div class="library0">
-        <div class="introduceImage">
-            <img src="#" alt="BGimage">
-            <img src="#" alt="arrow-icon">
-        </div>
-        <div class="introduceContent">
-            <h2>认知库</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id ratione nesciunt quia repellendus voluptatum.</p>
-        </div>
-    </div>
-    <div class="library1">
-        <div class="introduceImage">
-            <img src="#" alt="BGimage">
-            <img src="#" alt="arrow-icon">
-        </div>
-        <div class="introduceContent">
-            <h2>认知库</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, id ratione nesciunt quia repellendus voluptatum.</p>
-        </div>
-    </div>
-
+    </footer>
 </body>
 </html>

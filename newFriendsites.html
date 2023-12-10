@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newfriendsites</title>
+    <link rel="stylesheet" href="./css/addFonts.css">
+    <link rel="stylesheet" href="./css/TopArea_Footer.css">
+    <style>
+        *{margin: 0;padding: 0;}
+        a {text-decoration: none;}
+        a:link {color:inherit;}      /* 未访问链接*/
+        a:visited {color:#F9BE7D;}  /* 已访问链接 */
+        a:hover {filter: invert(0.3);}  /* 鼠标移动到链接上 */
+        ul{list-style: none;}
+        body{
+            background-image: url(./img/纹理背景/古风纹理背景\ \(34\).jpg);
+            background-size: 60%;
+            background-repeat: repeat;}
+        .main{width: 86vw;margin: 0 auto;text-align: center;}
+        /* 覆盖外部css样式 */
+        .NavigationBar{ position:relative;}
+        
+        .top-text-navigation{
+            display: flex;
+            justify-content: flex-start;align-items:center;
+            margin: 2.5vw 0;
+        }
+        .top-text-navigation a{
+            font-size: 16px;
+            margin: 0 0.2em;
+        }
+        .main .Title{
+            margin: 2em 0 0.5em 0;
+        }
+        ul.fliter{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;align-items: center;
+            margin: 1em 0;
+        }
+        ul.fliter .AlterinputBTN{
+            background-color: rgb(220, 220, 220);
+            border: none;
+            padding: 0.5em 1.8em;
+            margin: 0 0.5em;
+            border-radius: 5em;
+        }
+        ul.fliter .AlterinputBTN:hover{filter: invert(0.2);}
+        ul.fliter .AlterinputBTN:focus{
+            color: white;
+            background-color: #F9BE7D;
+        }
+        ul.FriendWedContainter{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* 高度为宽度-网格间距+段落内容高度+边距 */
+            grid-template-rows: calc((86vw - 5vw * 3) / 4 + 20px + 16px + 1em);
+            gap: 3vw 5vw; 
+            /* display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;align-items: center; */
+        }
+        ul.FriendWedContainter>li.FriendItem{
+            /* border: 1px solid black; */
+            display: block;
+            /* margin-right: 5vw; */
+        }
+        ul.FriendWedContainter>li h4{
+            font-size: 20px;
+            margin: 0.25em 0;
+            text-align: left;
+        }
+        ul.FriendWedContainter>li p{
+            font-size: 12px;
+            margin:0;
+            text-align: left;}
+        ul.FriendWedContainter>li>div.websiteIMG{
+            /* width: 320px;height: 320px; */
+            height: calc((86vw - 5vw * 3) / 4);
+            background-image: url(./img/纹理背景/中国风红色新年无缝背景.jpg);
+            background-size: 100% 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        ul.FriendWedContainter>li>div.websiteIMG>div.hidenMask{
+            width: 100%;height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        div.hidenMask::before{
+            content: "";
+            width: 100%;height: 100%;
+            background-color: rgba(150, 150, 150, 0.5);
+            position: absolute;
+            top: 100%;left: 0;
+            transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        div.websiteIMG button{
+            width: 40%;
+            border: none;
+            padding: 3%;
+            margin: 0 1%;
+            /* 遮罩宽度-自身宽度-边距 */
+            transform: translateY(-100%);
+            opacity: 0.8;
+            transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition-delay: 0s;
+            cursor: pointer;
+            color: white;
+            background-color: #F9BE7D;
+        }
+        .FriendItem:hover div.hidenMask::before{top: 0};
+        .FriendItem:hover div.websiteIMG button{
+            transition-delay: 0.6s;
+            /* transform: translateY(-150%); */
+            opacity: 1;
+        }
+        
+ /* 按钮通用格式 */
+        .knowmorebtn{
+            height: 2.5em;
+            padding: 0.5em;
+            border: none;
+            cursor: pointer;
+            display: flex;justify-content: center;align-items: center;
+            transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .knowmorebtn img{height: 1.2em;margin-left: 0.75em;transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);}
+        /* 如果按钮没有背景，箭头图片放大1.25倍 */
+        .btnNOBG img{scale: 1.25;}
+        .knowmorebtn:hover{opacity: 0.8;}
+        .knowmorebtn:hover > img{
+            transform: rotate(-45deg) scale(1.25);
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <div class="NavigationBar">
+            <a name="pageHead"></a>  <!-- 一个跳转标记用的超链接 -->
+            <div class="slideMark">
+                <div class="slideMark-square"></div>
+                <div class="slideMark-triangle"></div>
+            </div>
+            
+            <ul class="barlinklist">
+            <li class="logolink">
+                <a href="index.html" >
+                    <img src="./img/search.svg" alt="logo" id="logoimg">
+                    <span>动物文化线上图书馆</span>
+                </a>
+            </li>
+            <li>
+                <label><a href="./Librarys.html" id="a">资源库</a> <div class="triangleborder"></div></label>
+                <div class="Hidendropdown">
+                    <h2>资源库</h2>
+                    <img src="./img/icon/simple arrow.svg" alt="arrowToleft">
+                    <ul>
+                        <li><a href="./CognitionLibrary.html">认知库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./ArtLibrary.html">艺术库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./FakeError.html">民俗库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./UnfinishedWarning.html">信仰库</a>
+                            <ul>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                                <li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li><li>
+                                    <p>古代进化论</p>
+                                    <img src="./img/icon/simple arrow.svg" alt="arrow">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="./Topics.html">专题</a><div class="triangleborder"></div>
+                <div class="Hidendropdown">
+                    <h2>专题</h2>
+                    <img src="./img/icon/simple arrow.svg" alt="arrowToleft">
+                    <ul>
+                        <li><a href="./CognitionLibrary.html">中国虎文化专题</a></li>
+                        <li><a href="./ArtLibrary.html"></a>青铜兽类专题</li>
+                        <li><a href="./FakeError.html"></a>图腾专题</li>
+                    </ul>
+                </div></li>
+            <li><a href="./Tools.html">工具</a><div class="triangleborder"></div>
+                <div class="Hidendropdown">
+                    <h2>工具</h2>
+                    <img src="./img/icon/simple arrow.svg" alt="arrowToleft">
+                    <ul>
+                        <li><a href="./CognitionLibrary.html">高级检索</a></li>
+                        <li><a href="./ArtLibrary.html"></a>历史地图</li>
+                        <li><a href="./FakeError.html"></a>知识图谱</li>
+                        <li><a href="./UnfinishedWarning.html">友情链接</a></li>
+                    </ul>
+                </div></li>
+            <li><a href="./products.html">产品</a><div class="triangleborder"></div></li>
+            <li><a href="./Supportme.html">捐赠</a></li>
+            <li><a href="./AboutsUS.html">关于</a></li>
+            <li class="SearchIcon">
+                <div class="hideSearchBar">
+                    <input type="text">
+                </div>
+            </li>
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <div class="Title">
+            <h1>网站资源链接</h1>
+        </div>
+        <div class="top-text-navigation">
+            <a href="./index.html">首页</a>
+            <img src="./img/icon/simple arrow.svg" alt="arrow">
+            <a href="./Tools.html">工具</a>
+            <img src="./img/icon/simple arrow.svg" alt="arrow">
+            <a href="#">友情链接</a>
+        </div>
+        <ul class="fliter">
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
+            <li><button class="AlterinputBTN">分类情况</button></li>
+        </ul>
+        <ul class="FriendWedContainter">
+            <li class="FriendItem">
+                <div class="websiteIMG">
+                    <div class="hidenMask">
+                    </div>
+                    <button>查看详情</button>
+                    <button>直达网站</button>
+                </div>
+                <h4>网站名称</h4>
+                <p>网站介绍</p>
+            </li>
+            <li class="FriendItem">
+                <div class="websiteIMG">
+                    <div class="hidenMask">
+                    </div>
+                    <button>查看详情</button>
+                    <button>直达网站</button>
+                </div>
+                <h4>网站名称</h4>
+                <p>网站介绍</p>
+            </li>
+            <li class="FriendItem">
+                <div class="websiteIMG">
+                    <div class="hidenMask">
+                    </div>
+                    <button>查看详情</button>
+                    <button>直达网站</button>
+                </div>
+                <h4>网站名称</h4>
+                <p>网站介绍</p>
+            </li>
+            <li class="FriendItem">
+                <div class="websiteIMG">
+                    <div class="hidenMask">
+                    </div>
+                    <button>查看详情</button>
+                    <button>直达网站</button>
+                </div>
+                <h4>网站名称</h4>
+                <p>网站介绍</p>
+            </li>
+            <li class="FriendItem">
+                <div class="websiteIMG">
+                    <div class="hidenMask">
+                    </div>
+                    <button>查看详情</button>
+                    <button>直达网站</button>
+                </div>
+                <h4>网站名称</h4>
+                <p>网站介绍</p>
+            </li>
+            <li class="FriendItem">
+                <div class="websiteIMG">
+                    <div class="hidenMask">
+                    </div>
+                    <button>查看详情</button>
+                    <button>直达网站</button>
+                </div>
+                <h4>网站名称</h4>
+                <p>网站介绍</p>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>   
+    //页面加载时执行
+    window.onload = function () {
+    // 警钟事件
+    alert("This page is still under construction.Sorry for the inconvenience. 此页面处于未完成状态;很抱歉没有完成");
+}</script>
+</html>
