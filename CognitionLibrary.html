@@ -118,7 +118,7 @@
      }
      .oldbook{
         width: 200px;height: 270px;
-        background-image: url(./img/摩羯纹.jpg);
+        /* background-image: url(./img/摩羯纹.jpg); */
         background-position: center;
         background-size: cover;
      }
@@ -129,6 +129,12 @@
         background-color: rgba(128, 128, 128, 0.39);
         backdrop-filter: blur(2px);
      }
+     .oldbooks li:nth-child(1) .oldbook{ background-image:url(./img/古籍/hai_cuo_bai_yi_lu01-1500x1405.jpg);background-position: 120% 0%;background-size: cover;}
+     .oldbooks li:nth-child(2) .oldbook{ background-image:url(./img/古籍/bu_huang_yao_jue02.jpg) ;}
+     .oldbooks li:nth-child(3) .oldbook{ background-image:url(./img/古籍/nong_sang_ji_yao01-1500x1885.jpg) ;}
+     .oldbooks li:nth-child(4) .oldbook{ background-image:url(./img/古籍/guanghutu.png) ;}
+     .oldbooks li:nth-child(5) .oldbook{ background-image:url(./img/古籍/清\ 米色地百蝶花卉纹锦.jpg) ;}
+     .oldbooks li:nth-child(6) .oldbook{ background-image:url(./img/古籍/清\ 任熊画姚大梅诗意册其一.jpg) ;}
 
      .words ul{
         display: flex;
@@ -143,7 +149,7 @@
         display: flex;
         justify-content:space-between;align-items: center;
         flex-direction: row;
-        margin: 0.5em 0;
+        margin: 0.25em 0;
         padding: 0.5em;
      }
      .words li.topheadtopic{
@@ -318,13 +324,13 @@
 
         <div class="oldbooks">
             <ul>
-                <li><div class="oldbook"><p>名称名称名称名称</p></div></li>
+                <li><div class="oldbook"><p>海错百一录</p></div></li>
                 <!-- 动效做上下合起来的灰色遮罩 和文字浮现 -->
-                <li><div class="oldbook"><p>名称名称名称名称</p></div></li>
-                <li><div class="oldbook"><p>名称名称名称名称</p></div></li>
-                <li><div class="oldbook"><p>名称名称名称名称</p></div></li>
-                <li><div class="oldbook"><p>名称名称名称名称</p></div></li>
-                <li><div class="oldbook"><p>名称名称名称名称</p></div></li>
+                <li><div class="oldbook"><p>捕蝗要诀</p></div></li>
+                <li><div class="oldbook"><p>农桑辑要</p></div></li>
+                <li><div class="oldbook"><p>海错图</p></div></li>
+                <li><div class="oldbook"><p>米色地百蝶花卉纹锦</p></div></li>
+                <li><div class="oldbook"><p>任熊画姚大梅诗意册</p></div></li>
             </ul>
         </div>
 <!-- 动物古词 -->
@@ -361,8 +367,12 @@
 
             <div class="words">
                 <ul>
-                    <li class="topheadtopic"> <p>名称</p><p>出处</p><p>类型</p><p>年代</p><p>涉及生物</p> </li>
-                    <li> <p>名称</p><p>出处</p><p>年代</p><p>涉及生物</p><a href="./details.html">查看详情</a></li>
+                    <li class="topheadtopic"> <p>名称</p><p>出处</p><p>类型</p><p>年代</p><p>涉及生物</p> <p>----</p></li>
+                    <li> <p>大虫</p><p>水浒传等多处</p><p>商以前</p><p>老虎</p><a href="./details.html">查看详情</a></li>
+                    <li> <p>鱼化为雀</p><p>古代化生说</p><p>未知</p><p>石斑鱼、黄雀</p><a href="./details.html">查看详情</a></li>
+                    <li> <p>獭祭酒</p><p>动物物候</p><p>周以前</p><p>小爪水獭、欧亚水獭</p><a href="./details.html">查看详情</a></li>
+                    <li> <p>十二生肖</p><p>动物象征</p><p>西周</p><p>鼠牛虎兔龙蛇马...</p><a href="./details.html">查看详情</a></li>
+                    <li> <p>狐假虎威</p><p>动物成语</p><p>未知</p><p>赤狐、华南虎</p><a href="./details.html">查看详情</a></li> 
                 </ul>
             </div>
         </div>

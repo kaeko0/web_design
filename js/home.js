@@ -16,19 +16,22 @@ window.onload = function () {
     }
 
     document.getElementById("GoUPScrollBTN").addEventListener("click", GoUPScroll);
+    // 这里url和css的选择不一样？不是从js文件开始寻找，ChineseAnimal是根目录?
+    document.getElementById("CognitionLibrary").addEventListener("click", function () {window.open("./CognitionLibrary.html")});
+    document.getElementById("BeliefLibrary").addEventListener("click", function () {window.open("./CognitionLibrary.html")});
+    document.getElementById("ArtnLibrary").addEventListener("click", function () {window.open("./ArtLibrary.html")});
+    document.getElementById("FolkcustomLibrary").addEventListener("click", function () {window.open("./CognitionLibrary.html")});
 
-    document.getElementById("CognitionLibrary").addEventListener("click", function () {window.open("../CognitionLibrary.html")});
-    document.getElementById("ArtnLibrary").addEventListener("click", function () {window.open("../ArtLibrary.html")});
 
     var Topicitems = document.querySelectorAll(".Topicsitem");
     for (var n = 0; n < Topicitems.length; n++){
-        Topicitems[n].addEventListener("click", function () {window.open("../TigerCulture.html")});
+        Topicitems[n].addEventListener("click", function () {window.open("./TigerCulture.html")});
     }
 
-    document.getElementById("t1BTN").addEventListener("click", function () {window.open("../Tools.html")});
-    document.getElementById("t2BTN").addEventListener("click", function () {window.open("../newFriendsites.html")});
-    document.getElementById("t3BTN").addEventListener("click", function () {window.open("../Tools.html")});
-    document.getElementById("t4BTN").addEventListener("click", function () {window.open("../Tools.html")});
+    document.getElementById("t1BTN").addEventListener("click", function () {window.open("./Tools.html")});
+    document.getElementById("t2BTN").addEventListener("click", function () {window.open("./newFriendsites.html")});
+    document.getElementById("t3BTN").addEventListener("click", function () {window.open("./Tools.html")});
+    document.getElementById("t4BTN").addEventListener("click", function () {window.open("./Tools.html")});
     // 当前页面打开
     // window.location.href = "#";
    

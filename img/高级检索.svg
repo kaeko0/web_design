@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1637" height="591" viewBox="0 0 1637 591">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="1582" height="227" fill="none"/>
+    </clipPath>
+    <clipPath id="clip">
+      <use xlink:href="#fill"/>
+    </clipPath>
+    <clipPath id="clip-2">
+      <use xlink:href="#fill-2"/>
+    </clipPath>
+  </defs>
+  <g id="组_315" data-name="组 315" transform="translate(-136 -837)">
+    <g id="矩形_705" data-name="矩形 705" transform="translate(136 837)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="1637" height="591" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1636" height="590" rx="14.5" fill="none"/>
+    </g>
+    <text id="增加新的对象" transform="translate(301 1227)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">增加新的对象</tspan></text>
+    <g id="重复网格_20" data-name="重复网格 20" transform="translate(160 952)" clip-path="url(#clip-path)">
+      <g id="组_154" data-name="组 154" transform="translate(-160 -1007)">
+        <g id="矩形_718" data-name="矩形 718" transform="translate(308 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="291" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="290" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_725" data-name="矩形 725" transform="translate(230 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="54" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="53" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_727" data-name="矩形 727" transform="translate(165 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="54" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="53" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_719" data-name="矩形 719" transform="translate(649 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="165" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="164" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_720" data-name="矩形 720" transform="translate(864 1007)" fill="#d3d3d3" stroke="#707070" stroke-width="1">
+          <rect width="856" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="855" height="51" rx="9.5" fill="none"/>
+        </g>
+        <text id="包含与否" transform="translate(685 1042)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">包含与否</tspan></text>
+        <text id="tag" transform="translate(331 1042)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">tag</tspan></text>
+      </g>
+      <g id="组_154-2" data-name="组 154" transform="translate(-160 -928)">
+        <g id="矩形_718-2" data-name="矩形 718" transform="translate(308 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="291" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="290" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_725-2" data-name="矩形 725" transform="translate(230 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="54" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="53" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_727-2" data-name="矩形 727" transform="translate(165 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="54" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="53" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_719-2" data-name="矩形 719" transform="translate(649 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="165" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="164" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_720-2" data-name="矩形 720" transform="translate(864 1007)" fill="#d3d3d3" stroke="#707070" stroke-width="1">
+          <rect width="856" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="855" height="51" rx="9.5" fill="none"/>
+        </g>
+        <text id="包含与否-2" data-name="包含与否" transform="translate(685 1042)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">包含与否</tspan></text>
+        <text id="并且" transform="translate(331 1042)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">并且</tspan></text>
+      </g>
+      <g id="组_154-3" data-name="组 154" transform="translate(-160 -849)">
+        <g id="矩形_718-3" data-name="矩形 718" transform="translate(308 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="291" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="290" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_725-3" data-name="矩形 725" transform="translate(230 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="54" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="53" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_727-3" data-name="矩形 727" transform="translate(165 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="54" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="53" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_719-3" data-name="矩形 719" transform="translate(649 1007)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="165" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="164" height="51" rx="9.5" fill="none"/>
+        </g>
+        <g id="矩形_720-3" data-name="矩形 720" transform="translate(864 1007)" fill="#d3d3d3" stroke="#707070" stroke-width="1">
+          <rect width="856" height="52" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="855" height="51" rx="9.5" fill="none"/>
+        </g>
+        <text id="包含与否-3" data-name="包含与否" transform="translate(685 1042)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">包含与否</tspan></text>
+        <text id="并且-2" data-name="并且" transform="translate(331 1042)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">并且</tspan></text>
+      </g>
+    </g>
+    <line id="直线_31" data-name="直线 31" x2="1637" transform="translate(136 1339.688)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="直线_32" data-name="直线 32" x2="1637" transform="translate(136 1268.585)" fill="none" stroke="#707070" stroke-width="1"/>
+    <g id="矩形_721" data-name="矩形 721" transform="translate(1617 1365)" fill="#fc9f3f" stroke="#707070" stroke-width="1">
+      <rect width="132" height="46" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="131" height="45" rx="14.5" fill="none"/>
+    </g>
+    <g id="矩形_722" data-name="矩形 722" transform="translate(171 1365)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="132" height="46" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="131" height="45" rx="14.5" fill="none"/>
+    </g>
+    <g id="矩形_729" data-name="矩形 729" transform="translate(158 1282)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="657" height="46" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="656" height="45" rx="14.5" fill="none"/>
+    </g>
+    <g id="矩形_732" data-name="矩形 732" transform="translate(835 1282)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="173" height="46" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="172" height="45" rx="14.5" fill="none"/>
+    </g>
+    <g id="矩形_738" data-name="矩形 738" transform="translate(1021 1282)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="182" height="46" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="181" height="45" rx="14.5" fill="none"/>
+    </g>
+    <g id="矩形_723" data-name="矩形 723" transform="translate(160 870)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="213" height="52" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="212" height="51" rx="14.5" fill="none"/>
+    </g>
+    <g id="矩形_724" data-name="矩形 724" transform="translate(398 871)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="1344" height="52" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1343" height="51" rx="14.5" fill="none"/>
+    </g>
+    <text id="接受" transform="translate(1660 1397)" fill="#fff" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">接受</tspan></text>
+    <text id="清空" transform="translate(214 1397)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">清空</tspan></text>
+    <text id="关联同义词" transform="translate(212 1314)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">关联同义词</tspan></text>
+    <text id="同义词1" transform="translate(416 1314)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">同义词1</tspan></text>
+    <text id="同义词1-2" data-name="同义词1" transform="translate(564 1314)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">同义词1</tspan></text>
+    <text id="同义词1-3" data-name="同义词1" transform="translate(712 1314)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">同义词1</tspan></text>
+    <text id="忽略标点" transform="translate(889 1314)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">忽略标点</tspan></text>
+    <text id="检索关联词" transform="translate(1075 1314)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">检索关联词</tspan></text>
+    <text id="过滤器" transform="translate(231 906)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'"><tspan x="0" y="0">过滤器</tspan></text>
+    <text id="输入检索的主要内容" transform="translate(461 907)" fill="#f9be7d" font-size="24" font-family="AlibabaPuHuiTi_2_55_Regular, 'Alibaba PuHuiTi \32 \.0'" opacity="0.26"><tspan x="0" y="0">输入检索的主要内容</tspan></text>
+    <g id="组件_35_2" data-name="组件 35 – 2" transform="translate(174 882)">
+      <g id="矩形_585" data-name="矩形 585" transform="translate(10.343 9.171) rotate(45)" fill="none" stroke="#707070" stroke-width="250">
+        <rect id="fill" width="17" height="5.235" rx="2.618" stroke="none"/>
+        <path d="M0,-119.76468086242676h17M125,0v5.235319137573242M17,125h-17M-108,5.235319137573242v-5.235319137573242" fill="none" clip-path="url(#clip)"/>
+      </g>
+      <g id="矩形_584" data-name="矩形 584" fill="none" stroke="#707070" stroke-width="5">
+        <rect width="32" height="32" rx="16" stroke="none"/>
+        <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" fill="none"/>
+      </g>
+    </g>
+    <g id="组件_35_3" data-name="组件 35 – 3" transform="translate(419 881)">
+      <g id="矩形_585-2" data-name="矩形 585" transform="translate(10.343 9.171) rotate(45)" fill="none" stroke="#707070" stroke-width="250">
+        <rect id="fill-2" width="17" height="5.235" rx="2.618" stroke="none"/>
+        <path d="M0,-119.76468086242676h17M125,0v5.235319137573242M17,125h-17M-108,5.235319137573242v-5.235319137573242" fill="none" clip-path="url(#clip-2)"/>
+      </g>
+      <g id="矩形_584-2" data-name="矩形 584" fill="none" stroke="#707070" stroke-width="5">
+        <rect width="32" height="32" rx="16" stroke="none"/>
+        <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" fill="none"/>
+      </g>
+    </g>
+    <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M18,20.679l8.93-8.937a1.681,1.681,0,0,1,2.384,0,1.7,1.7,0,0,1,0,2.391L19.2,24.258a1.685,1.685,0,0,1-2.327.049L6.68,14.14a1.688,1.688,0,0,1,2.384-2.391Z" transform="translate(318.005 880.002)"/>
+    <path id="Icon_ionic-ios-arrow-down-2" data-name="Icon ionic-ios-arrow-down" d="M6.987,2.408l5.282,5.286a.994.994,0,0,0,1.41,0,1.007,1.007,0,0,0,0-1.414L7.694.291A1,1,0,0,0,6.318.262L.291,6.276A1,1,0,0,0,1.7,7.69Z" transform="translate(352.801 1298.515) rotate(90)"/>
+    <g id="矩形_726" data-name="矩形 726" transform="translate(248 1202)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="0.5" y="0.5" width="32" height="32" fill="none"/>
+    </g>
+    <g id="矩形_730" data-name="矩形 730" transform="translate(174 1289)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="0.5" y="0.5" width="32" height="32" fill="none"/>
+    </g>
+    <g id="矩形_734" data-name="矩形 734" transform="translate(388 1295)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="21" height="21" stroke="none"/>
+      <rect x="0.5" y="0.5" width="20" height="20" fill="none"/>
+    </g>
+    <g id="矩形_735" data-name="矩形 735" transform="translate(536 1295)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="21" height="21" stroke="none"/>
+      <rect x="0.5" y="0.5" width="20" height="20" fill="none"/>
+    </g>
+    <g id="矩形_736" data-name="矩形 736" transform="translate(684 1295)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="21" height="21" stroke="none"/>
+      <rect x="0.5" y="0.5" width="20" height="20" fill="none"/>
+    </g>
+    <g id="矩形_731" data-name="矩形 731" transform="translate(845 1289)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="0.5" y="0.5" width="32" height="32" fill="none"/>
+    </g>
+    <g id="矩形_737" data-name="矩形 737" transform="translate(1030 1289)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="0.5" y="0.5" width="32" height="32" fill="none"/>
+    </g>
+    <g id="多边形_18" data-name="多边形 18" transform="translate(1707 966) rotate(90)" fill="#fff">
+      <path d="M 26.25897026062012 23.49999809265137 L 1.741039991378784 23.49999809265137 C 1.479820013046265 23.49999809265137 1.350810050964355 23.32448959350586 1.307469964027405 23.2490291595459 C 1.264129996299744 23.17356872558594 1.17753005027771 22.97369956970215 1.309149980545044 22.7480583190918 L 13.56811046600342 1.732708811759949 C 13.69871997833252 1.508808851242065 13.913649559021 1.484638810157776 14 1.484638810157776 C 14.086350440979 1.484638810157776 14.30128002166748 1.508808851242065 14.43188953399658 1.732708811759949 L 26.69084930419922 22.74806976318359 C 26.82246971130371 22.97369956970215 26.73587989807129 23.17356872558594 26.69253921508789 23.2490291595459 C 26.64920043945312 23.32448959350586 26.52018928527832 23.49999809265137 26.25897026062012 23.49999809265137 Z" stroke="none"/>
+      <path d="M 13.99999713897705 1.984634399414062 L 14 1.984628677368164 L 1.741039276123047 22.99999809265137 L 26.25896072387695 22.99999809265137 L 14 1.984638214111328 C 13.99999904632568 1.984636306762695 13.99999809265137 1.984636306762695 13.99999713897705 1.984634399414062 M 14 0.9846343994140625 C 14.33541965484619 0.9846343994140625 14.6708402633667 1.150009155273438 14.86378002166748 1.480758666992188 L 27.12273979187012 22.49612808227539 C 27.51161956787109 23.16278839111328 27.0307502746582 23.99999809265137 26.25896072387695 23.99999809265137 L 1.741039276123047 23.99999809265137 C 0.9692497253417969 23.99999809265137 0.4883708953857422 23.16278839111328 0.8772602081298828 22.49612808227539 L 13.13621997833252 1.480758666992188 C 13.3291597366333 1.150009155273438 13.66458034515381 0.9846343994140625 14 0.9846343994140625 Z" stroke="none" fill="#707070"/>
+    </g>
+  </g>
+</svg>
